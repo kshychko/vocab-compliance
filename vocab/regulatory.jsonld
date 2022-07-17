@@ -11,10 +11,10 @@
     },
     "@graph": [
         {
-            "@id": "regulatory:CustomsProcedure",
+            "@id": "regulatory:Cross-BorderCustomsProcedure",
             "@type": "rdfs:Class",
             "rdfs:comment": "Any procedure based on the World Customs Organization (WCO) Kyoto Convention and related to the movement of internationally traded goods across borders.",
-            "rdfs:label": "CustomsProcedure",
+            "rdfs:label": "Cross-BorderCustomsProcedure",
             "unece:cefactElementMetadata": [
                 {
                     "@id": "cefact:Cross-Border_CustomsProcedure.Details",
@@ -25,10 +25,10 @@
             ]
         },
         {
-            "@id": "regulatory:CustomsValuation",
+            "@id": "regulatory:Cross-BorderCustomsValuation",
             "@type": "rdfs:Class",
             "rdfs:comment": "A cross-border trade related assessment of the worth of an object, such as its monetary value, for customs purposes.",
-            "rdfs:label": "CustomsValuation",
+            "rdfs:label": "Cross-BorderCustomsValuation",
             "unece:cefactElementMetadata": [
                 {
                     "@id": "cefact:Cross-Border_CustomsValuation.Details",
@@ -39,33 +39,10 @@
             ]
         },
         {
-            "@id": "regulatory:Declaration",
-            "@type": "rdfs:Class",
-            "rdfs:comment": [
-                "An act of notification by formal documentation or action, in any form prescribed or accepted, such as a self-declaration.",
-                "A collection of data for a piece of written, printed or electronic matter that is exchanged between two parties as a formal declaration."
-            ],
-            "rdfs:label": "Declaration",
-            "unece:cefactElementMetadata": [
-                {
-                    "@id": "cefact:Specified_Declaration.Details",
-                    "@type": "unece:AggregateBIE",
-                    "unece:cefactUNId": "UN01015056",
-                    "rdfs:comment": "An act of notification by formal documentation or action, in any form prescribed or accepted, such as a self-declaration."
-                },
-                {
-                    "@id": "cefact:Exchanged_Declaration.Details",
-                    "@type": "unece:AggregateBIE",
-                    "unece:cefactUNId": "UN01011006",
-                    "rdfs:comment": "A collection of data for a piece of written, printed or electronic matter that is exchanged between two parties as a formal declaration."
-                }
-            ]
-        },
-        {
-            "@id": "regulatory:RegulatoryProcedure",
+            "@id": "regulatory:Cross-BorderRegulatoryProcedure",
             "@type": "rdfs:Class",
             "rdfs:comment": "A set of formal steps to satisfy a cross-border regulation, law or convention.",
-            "rdfs:label": "RegulatoryProcedure",
+            "rdfs:label": "Cross-BorderRegulatoryProcedure",
             "unece:cefactElementMetadata": [
                 {
                     "@id": "cefact:Cross-Border_RegulatoryProcedure.Details",
@@ -76,13 +53,41 @@
             ]
         },
         {
+            "@id": "regulatory:ExchangedDeclaration",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "A collection of data for a piece of written, printed or electronic matter that is exchanged between two parties as a formal declaration.",
+            "rdfs:label": "ExchangedDeclaration",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Exchanged_Declaration.Details",
+                    "@type": "unece:AggregateBIE",
+                    "unece:cefactUNId": "UN01011006",
+                    "rdfs:comment": "A collection of data for a piece of written, printed or electronic matter that is exchanged between two parties as a formal declaration."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:SpecifiedDeclaration",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "An act of notification by formal documentation or action, in any form prescribed or accepted, such as a self-declaration.",
+            "rdfs:label": "SpecifiedDeclaration",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Specified_Declaration.Details",
+                    "@type": "unece:AggregateBIE",
+                    "unece:cefactUNId": "UN01015056",
+                    "rdfs:comment": "An act of notification by formal documentation or action, in any form prescribed or accepted, such as a self-declaration."
+                }
+            ]
+        },
+        {
             "@id": "regulatory:acquisitionDateTime",
             "@type": "rdf:Property",
             "schema:rangeIncludes": {
                 "@id": "xsd:dateTime"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:RegulatoryProcedure"
+                "@id": "regulatory:Cross-BorderRegulatoryProcedure"
             },
             "rdfs:comment": "The date, time, date time, or other date time value of an acquisition for this cross-border regulatory procedure.",
             "rdfs:label": "acquisitionDateTime",
@@ -103,7 +108,7 @@
                 "@id": "xsd:decimal"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:CustomsValuation"
+                "@id": "regulatory:Cross-BorderCustomsValuation"
             },
             "rdfs:comment": "The monetary value of the adjustment added for this cross-border customs valuation.",
             "rdfs:label": "addedAdjustmentAmount",
@@ -125,7 +130,7 @@
                 "@id": "xsd:decimal"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:CustomsValuation"
+                "@id": "regulatory:Cross-BorderCustomsValuation"
             },
             "rdfs:comment": "The adjustment added, expressed as a percentage, for this cross-border customs valuation.",
             "rdfs:label": "addedAdjustmentPercent",
@@ -147,7 +152,7 @@
                 "@id": "regulatory:Document"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:CustomsProcedure"
+                "@id": "regulatory:Cross-BorderCustomsProcedure"
             },
             "rdfs:comment": "An additional referenced document for this cross-border customs procedure.",
             "rdfs:label": "additionalDocument",
@@ -168,7 +173,7 @@
                 "@id": "regulatory:Note"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:Declaration"
+                "@id": "regulatory:ExchangedDeclaration"
             },
             "rdfs:comment": "An additional statement note for this exchanged declaration.",
             "rdfs:label": "additionalStatementNote",
@@ -189,7 +194,7 @@
                 "@id": "xsd:decimal"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:CustomsProcedure"
+                "@id": "regulatory:Cross-BorderCustomsProcedure"
             },
             "rdfs:comment": "The monetary value of an additional basis on which the valuation is, or will be, calculated for this cross-border customs procedure.",
             "rdfs:label": "additionalValuationBasisAmount",
@@ -211,10 +216,10 @@
             },
             "schema:domainIncludes": [
                 {
-                    "@id": "regulatory:CustomsProcedure"
+                    "@id": "regulatory:Cross-BorderCustomsProcedure"
                 },
                 {
-                    "@id": "regulatory:RegulatoryProcedure"
+                    "@id": "regulatory:Cross-BorderRegulatoryProcedure"
                 }
             ],
             "rdfs:comment": [
@@ -246,7 +251,7 @@
                 "@id": "xsd:decimal"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:RegulatoryProcedure"
+                "@id": "regulatory:Cross-BorderRegulatoryProcedure"
             },
             "rdfs:comment": "The annual quota quantity under this cross-border regulatory procedure.",
             "rdfs:label": "annualQuotaQuantity",
@@ -268,13 +273,13 @@
             },
             "schema:domainIncludes": [
                 {
-                    "@id": "regulatory:CustomsProcedure"
+                    "@id": "regulatory:Cross-BorderCustomsProcedure"
                 },
                 {
-                    "@id": "regulatory:CustomsValuation"
+                    "@id": "regulatory:Cross-BorderCustomsValuation"
                 },
                 {
-                    "@id": "regulatory:RegulatoryProcedure"
+                    "@id": "regulatory:Cross-BorderRegulatoryProcedure"
                 }
             ],
             "rdfs:comment": [
@@ -314,7 +319,7 @@
                 "@id": "regulatory:CustomsValuation"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:Declaration"
+                "@id": "regulatory:ExchangedDeclaration"
             },
             "rdfs:comment": "Customs valuation information applicable to this exchanged declaration.",
             "rdfs:label": "applicableCustomsValuation",
@@ -335,7 +340,7 @@
                 "@id": "regulatory:Period"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:RegulatoryProcedure"
+                "@id": "regulatory:Cross-BorderRegulatoryProcedure"
             },
             "rdfs:comment": "A period applicable to this cross-border regulatory procedure.",
             "rdfs:label": "applicablePeriod",
@@ -357,10 +362,10 @@
             },
             "schema:domainIncludes": [
                 {
-                    "@id": "regulatory:CustomsProcedure"
+                    "@id": "regulatory:Cross-BorderCustomsProcedure"
                 },
                 {
-                    "@id": "regulatory:RegulatoryProcedure"
+                    "@id": "regulatory:Cross-BorderRegulatoryProcedure"
                 }
             ],
             "rdfs:comment": [
@@ -392,7 +397,7 @@
                 "@id": "regulatory:Document"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:Declaration"
+                "@id": "regulatory:ExchangedDeclaration"
             },
             "rdfs:comment": "A referenced document associated with this exchanged declaration.",
             "rdfs:label": "associatedDocument",
@@ -413,7 +418,7 @@
                 "@id": "regulatory:Standard"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:Declaration"
+                "@id": "regulatory:SpecifiedDeclaration"
             },
             "rdfs:comment": "A referenced standard associated with this specified declaration.",
             "rdfs:label": "associatedStandard",
@@ -434,7 +439,7 @@
                 "@id": "xsd:token"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:Declaration"
+                "@id": "regulatory:SpecifiedDeclaration"
             },
             "rdfs:comment": "A code specifying an assurance level of this specified declaration.",
             "rdfs:label": "assuranceLevelCode",
@@ -455,7 +460,7 @@
                 "@id": "regulatory:Instructions"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:RegulatoryProcedure"
+                "@id": "regulatory:Cross-BorderRegulatoryProcedure"
             },
             "rdfs:comment": "Border clearance instructions for this cross-border regulatory procedure.",
             "rdfs:label": "borderClearanceInstructions",
@@ -476,7 +481,7 @@
                 "@id": "xsd:boolean"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:CustomsValuation"
+                "@id": "regulatory:Cross-BorderCustomsValuation"
             },
             "rdfs:comment": "The indication of whether or not there is a relationship between the buyer and the seller, such as a financial relationship, for this cross-border customs valuation.",
             "rdfs:label": "buyerSellerRelationshipIndicator",
@@ -497,7 +502,7 @@
                 "@id": "xsd:boolean"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:CustomsValuation"
+                "@id": "regulatory:Cross-BorderCustomsValuation"
             },
             "rdfs:comment": "The indication of whether or not the buyer seller relationship influences the price of the goods for this cross-border customs valuation.",
             "rdfs:label": "buyerSellerRelationshipPriceInfluenceIndicator",
@@ -518,7 +523,7 @@
                 "@id": "xsd:token"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:RegulatoryProcedure"
+                "@id": "regulatory:Cross-BorderRegulatoryProcedure"
             },
             "rdfs:comment": "A code specifying a category for this cross-border regulatory procedure, such as the appendices of the CITES Convention.",
             "rdfs:label": "categoryCode",
@@ -539,7 +544,7 @@
                 "@id": "xsd:string"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:RegulatoryProcedure"
+                "@id": "regulatory:Cross-BorderRegulatoryProcedure"
             },
             "rdfs:comment": "A basis for a certification, expressed as text, for this cross-border regulatory procedure.",
             "rdfs:label": "certificationBasis",
@@ -560,7 +565,7 @@
                 "@id": "xsd:token"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:CustomsValuation"
+                "@id": "regulatory:Cross-BorderCustomsValuation"
             },
             "rdfs:comment": "The code specifying the method of the apportion of charges for this cross-border customs valuation.",
             "rdfs:label": "chargeApportionMethodCode",
@@ -582,7 +587,7 @@
                 "@id": "regulatory:CustomsValuation"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:CustomsProcedure"
+                "@id": "regulatory:Cross-BorderCustomsProcedure"
             },
             "rdfs:comment": "The customs valuation of the consignment subject to this cross-border customs procedure.",
             "rdfs:label": "consignmentCustomsValuation",
@@ -603,7 +608,7 @@
                 "@id": "regulatory:Location"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:RegulatoryProcedure"
+                "@id": "regulatory:Cross-BorderRegulatoryProcedure"
             },
             "rdfs:comment": "A consignment destination location specified for this cross-border regulatory procedure.",
             "rdfs:label": "consignmentDestinationSpecifiedLocation",
@@ -624,7 +629,7 @@
                 "@id": "xsd:boolean"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:RegulatoryProcedure"
+                "@id": "regulatory:Cross-BorderRegulatoryProcedure"
             },
             "rdfs:comment": "The indication of whether or not a control is required for this cross-border regulatory procedure.",
             "rdfs:label": "controlRequirementIndicator",
@@ -646,10 +651,10 @@
             },
             "schema:domainIncludes": [
                 {
-                    "@id": "regulatory:CustomsProcedure"
+                    "@id": "regulatory:Cross-BorderCustomsProcedure"
                 },
                 {
-                    "@id": "regulatory:RegulatoryProcedure"
+                    "@id": "regulatory:Cross-BorderRegulatoryProcedure"
                 }
             ],
             "rdfs:comment": [
@@ -682,10 +687,10 @@
             },
             "schema:domainIncludes": [
                 {
-                    "@id": "regulatory:CustomsProcedure"
+                    "@id": "regulatory:Cross-BorderCustomsProcedure"
                 },
                 {
-                    "@id": "regulatory:RegulatoryProcedure"
+                    "@id": "regulatory:Cross-BorderRegulatoryProcedure"
                 }
             ],
             "rdfs:comment": [
@@ -718,7 +723,7 @@
                 "@id": "unece:UNECECL4439Code"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:RegulatoryProcedure"
+                "@id": "regulatory:Cross-BorderRegulatoryProcedure"
             },
             "rdfs:comment": "The code specifying the payment method for this cross-border regulatory procedure, such as by deferred payment method.",
             "rdfs:label": "cross-BorderRegulatoryProcedurePaymentMethodCode",
@@ -740,7 +745,7 @@
                 "@id": "unece:UNECECL9353Code"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:RegulatoryProcedure"
+                "@id": "regulatory:Cross-BorderRegulatoryProcedure"
             },
             "rdfs:comment": "A code specifying a type of cross-border regulatory procedure.",
             "rdfs:label": "cross-BorderRegulatoryProcedureTypeCode",
@@ -762,7 +767,7 @@
                 "@id": "xsd:decimal"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:Declaration"
+                "@id": "regulatory:ExchangedDeclaration"
             },
             "rdfs:comment": "The rate of currency exchange in this exchanged declaration.",
             "rdfs:label": "currencyExchangeRate",
@@ -783,7 +788,7 @@
                 "@id": "xsd:decimal"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:Declaration"
+                "@id": "regulatory:ExchangedDeclaration"
             },
             "rdfs:comment": "The monetary value specified for customs purposes in this exchanged declaration.",
             "rdfs:label": "customsValueSpecifiedAmount",
@@ -805,7 +810,7 @@
                 "@id": "regulatory:Party"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:Declaration"
+                "@id": "regulatory:ExchangedDeclaration"
             },
             "rdfs:comment": "The trade party acting as an agent for the declarant for this exchanged declaration.",
             "rdfs:label": "declarantAgentParty",
@@ -826,7 +831,7 @@
                 "@id": "xsd:token"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:RegulatoryProcedure"
+                "@id": "regulatory:Cross-BorderRegulatoryProcedure"
             },
             "rdfs:comment": "The declarant assigned identifier of a declaration for this cross-border regulatory procedure.",
             "rdfs:label": "declarantAssignedDeclarationId",
@@ -848,7 +853,7 @@
                 "@id": "regulatory:Party"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:Declaration"
+                "@id": "regulatory:ExchangedDeclaration"
             },
             "rdfs:comment": "The trade party acting as the declarant for this exchanged declaration.",
             "rdfs:label": "declarantParty",
@@ -870,10 +875,10 @@
             },
             "schema:domainIncludes": [
                 {
-                    "@id": "regulatory:CustomsProcedure"
+                    "@id": "regulatory:Cross-BorderCustomsProcedure"
                 },
                 {
-                    "@id": "regulatory:RegulatoryProcedure"
+                    "@id": "regulatory:Cross-BorderRegulatoryProcedure"
                 }
             ],
             "rdfs:comment": [
@@ -905,7 +910,7 @@
                 "@id": "xsd:decimal"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:CustomsValuation"
+                "@id": "regulatory:Cross-BorderCustomsValuation"
             },
             "rdfs:comment": "The monetary value of the adjustment deducted for this cross-border customs valuation.",
             "rdfs:label": "deductedAdjustmentAmount",
@@ -927,7 +932,7 @@
                 "@id": "xsd:decimal"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:CustomsValuation"
+                "@id": "regulatory:Cross-BorderCustomsValuation"
             },
             "rdfs:comment": "The adjustment deducted, expressed as a percentage, for this cross-border customs valuation.",
             "rdfs:label": "deductedAdjustmentPercent",
@@ -949,7 +954,7 @@
                 "@id": "xsd:decimal"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:RegulatoryProcedure"
+                "@id": "regulatory:Cross-BorderRegulatoryProcedure"
             },
             "rdfs:comment": "A monetary value of the total charges, including tariff and non-tariff charges, deferred for this cross-border regulatory procedure.",
             "rdfs:label": "deferredPayableTotalChargeAmount",
@@ -971,10 +976,10 @@
             },
             "schema:domainIncludes": [
                 {
-                    "@id": "regulatory:CustomsProcedure"
+                    "@id": "regulatory:Cross-BorderCustomsProcedure"
                 },
                 {
-                    "@id": "regulatory:RegulatoryProcedure"
+                    "@id": "regulatory:Cross-BorderRegulatoryProcedure"
                 }
             ],
             "rdfs:comment": [
@@ -1006,7 +1011,7 @@
                 "@id": "xsd:decimal"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:CustomsProcedure"
+                "@id": "regulatory:Cross-BorderCustomsProcedure"
             },
             "rdfs:comment": "The monetary value of the deferred total payable for this cross-border customs procedure including duty and other charges.",
             "rdfs:label": "deferredTotalPayableAmount",
@@ -1027,7 +1032,7 @@
                 "@id": "xsd:string"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:Declaration"
+                "@id": "regulatory:SpecifiedDeclaration"
             },
             "rdfs:comment": "A textual description of this specified declaration.",
             "rdfs:label": "description",
@@ -1048,7 +1053,7 @@
                 "@id": "unece:UNECECL1001Code"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:Declaration"
+                "@id": "regulatory:ExchangedDeclaration"
             },
             "rdfs:comment": "The code specifying the type of this exchanged declaration.",
             "rdfs:label": "documentTypeCode",
@@ -1070,7 +1075,7 @@
                 "@id": "xsd:decimal"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:CustomsProcedure"
+                "@id": "regulatory:Cross-BorderCustomsProcedure"
             },
             "rdfs:comment": "A monetary value of duty payable for this cross-border customs procedure.",
             "rdfs:label": "dutyPayableAmount",
@@ -1091,7 +1096,7 @@
                 "@id": "regulatory:Location"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:CustomsProcedure"
+                "@id": "regulatory:Cross-BorderCustomsProcedure"
             },
             "rdfs:comment": "The location of the customs office at which the goods which are subject to this cross-border customs procedure, will enter the customs territory of entry.",
             "rdfs:label": "entryCustomsOfficeLocation",
@@ -1112,7 +1117,7 @@
                 "@id": "regulatory:Location"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:RegulatoryProcedure"
+                "@id": "regulatory:Cross-BorderRegulatoryProcedure"
             },
             "rdfs:comment": "The location of the specified customs office at which the goods subject to this cross-border regulatory procedure, enter the customs territory of entry.",
             "rdfs:label": "entryCustomsOfficeSpecifiedLocation",
@@ -1133,7 +1138,7 @@
                 "@id": "regulatory:Event"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:RegulatoryProcedure"
+                "@id": "regulatory:Cross-BorderRegulatoryProcedure"
             },
             "rdfs:comment": "An examination event for this cross-border regulatory procedure.",
             "rdfs:label": "examinationEvent",
@@ -1155,10 +1160,10 @@
             },
             "schema:domainIncludes": [
                 {
-                    "@id": "regulatory:CustomsProcedure"
+                    "@id": "regulatory:Cross-BorderCustomsProcedure"
                 },
                 {
-                    "@id": "regulatory:RegulatoryProcedure"
+                    "@id": "regulatory:Cross-BorderRegulatoryProcedure"
                 }
             ],
             "rdfs:comment": [
@@ -1190,7 +1195,7 @@
                 "@id": "regulatory:Location"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:CustomsProcedure"
+                "@id": "regulatory:Cross-BorderCustomsProcedure"
             },
             "rdfs:comment": "The location of the customs office at which the goods which are subject to this cross-border customs procedure leave or are intended to leave the customs territory of destination.",
             "rdfs:label": "exitCustomsOfficeLocation",
@@ -1211,7 +1216,7 @@
                 "@id": "regulatory:Location"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:RegulatoryProcedure"
+                "@id": "regulatory:Cross-BorderRegulatoryProcedure"
             },
             "rdfs:comment": "The location of the specified customs office at which the goods which are subject to this cross-border regulatory procedure leave the customs territory of destination.",
             "rdfs:label": "exitCustomsOfficeSpecifiedLocation",
@@ -1232,7 +1237,7 @@
                 "@id": "xsd:boolean"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:CustomsProcedure"
+                "@id": "regulatory:Cross-BorderCustomsProcedure"
             },
             "rdfs:comment": "The indication of whether or not an export control is required for this cross-border customs procedure.",
             "rdfs:label": "exportControlRequirementIndicator",
@@ -1253,7 +1258,7 @@
                 "@id": "regulatory:Location"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:CustomsProcedure"
+                "@id": "regulatory:Cross-BorderCustomsProcedure"
             },
             "rdfs:comment": "The location of the customs office which is responsible for export formalities for the goods which are subject to this cross-border customs procedure.",
             "rdfs:label": "exportCustomsOfficeLocation",
@@ -1274,7 +1279,7 @@
                 "@id": "regulatory:Location"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:RegulatoryProcedure"
+                "@id": "regulatory:Cross-BorderRegulatoryProcedure"
             },
             "rdfs:comment": "The location of the specified customs office which is responsible for export formalities for the goods which are subject to this cross-border regulatory procedure.",
             "rdfs:label": "exportCustomsOfficeSpecifiedLocation",
@@ -1295,7 +1300,7 @@
                 "@id": "xsd:token"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:RegulatoryProcedure"
+                "@id": "regulatory:Cross-BorderRegulatoryProcedure"
             },
             "rdfs:comment": "The identifier of the export licence classification for control purposes relevant to this cross-border regulatory procedure, such as per the Wassenaar agreement concerning trade in weapons and dual-use goods and technologies.",
             "rdfs:label": "exportLicenceControlClassificationId",
@@ -1317,7 +1322,7 @@
                 "@id": "xsd:token"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:CustomsProcedure"
+                "@id": "regulatory:Cross-BorderCustomsProcedure"
             },
             "rdfs:comment": "The unique identifier of the export licence classification for control purposes relevant to this cross-border customs procedure, such as per the Wassenaar agreement concerning trade in weapons and dual-use goods and technologies.",
             "rdfs:label": "exportLicenseControlClassificationId",
@@ -1338,7 +1343,7 @@
                 "@id": "xsd:string"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:RegulatoryProcedure"
+                "@id": "regulatory:Cross-BorderRegulatoryProcedure"
             },
             "rdfs:comment": "The name of a free trade agreement, expressed as text, for this cross-border regulatory procedure.",
             "rdfs:label": "freeTradeAgreementName",
@@ -1360,10 +1365,10 @@
             },
             "schema:domainIncludes": [
                 {
-                    "@id": "regulatory:CustomsProcedure"
+                    "@id": "regulatory:Cross-BorderCustomsProcedure"
                 },
                 {
-                    "@id": "regulatory:RegulatoryProcedure"
+                    "@id": "regulatory:Cross-BorderRegulatoryProcedure"
                 }
             ],
             "rdfs:comment": [
@@ -1396,7 +1401,7 @@
                 "@id": "unece:UNECECL9417Code"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:RegulatoryProcedure"
+                "@id": "regulatory:Cross-BorderRegulatoryProcedure"
             },
             "rdfs:comment": "A code specifying an action for a responsible agency in this cross-border regulatory procedure.",
             "rdfs:label": "governmentActionResponsibleAgencyActionCode",
@@ -1418,7 +1423,7 @@
                 "@id": "xsd:decimal"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:Declaration"
+                "@id": "regulatory:ExchangedDeclaration"
             },
             "rdfs:comment": "The gross weight measure specified in this exchanged declaration.",
             "rdfs:label": "grossWeightSpecifiedMeasure",
@@ -1441,10 +1446,10 @@
             },
             "schema:domainIncludes": [
                 {
-                    "@id": "regulatory:CustomsProcedure"
+                    "@id": "regulatory:Cross-BorderCustomsProcedure"
                 },
                 {
-                    "@id": "regulatory:RegulatoryProcedure"
+                    "@id": "regulatory:Cross-BorderRegulatoryProcedure"
                 }
             ],
             "rdfs:comment": [
@@ -1478,10 +1483,10 @@
             },
             "schema:domainIncludes": [
                 {
-                    "@id": "regulatory:CustomsProcedure"
+                    "@id": "regulatory:Cross-BorderCustomsProcedure"
                 },
                 {
-                    "@id": "regulatory:RegulatoryProcedure"
+                    "@id": "regulatory:Cross-BorderRegulatoryProcedure"
                 }
             ],
             "rdfs:comment": [
@@ -1513,9 +1518,14 @@
             "schema:rangeIncludes": {
                 "@id": "xsd:token"
             },
-            "schema:domainIncludes": {
-                "@id": "regulatory:Declaration"
-            },
+            "schema:domainIncludes": [
+                {
+                    "@id": "regulatory:ExchangedDeclaration"
+                },
+                {
+                    "@id": "regulatory:SpecifiedDeclaration"
+                }
+            ],
             "rdfs:comment": [
                 "An identifier for this exchanged declaration.",
                 "An identifier for this specified declaration."
@@ -1547,7 +1557,7 @@
                 "@id": "xsd:decimal"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:RegulatoryProcedure"
+                "@id": "regulatory:Cross-BorderRegulatoryProcedure"
             },
             "rdfs:comment": "A monetary value of the total charges, including tariff and non-tariff charges, immediately payable for this cross-border regulatory procedure.",
             "rdfs:label": "immediatePayableTotalChargeAmount",
@@ -1568,7 +1578,7 @@
                 "@id": "xsd:decimal"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:CustomsProcedure"
+                "@id": "regulatory:Cross-BorderCustomsProcedure"
             },
             "rdfs:comment": "The monetary value of the immediate total payable for this cross-border customs procedure including duty and other charges.",
             "rdfs:label": "immediateTotalPayableAmount",
@@ -1589,7 +1599,7 @@
                 "@id": "regulatory:Location"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:CustomsProcedure"
+                "@id": "regulatory:Cross-BorderCustomsProcedure"
             },
             "rdfs:comment": "The location of the customs office which is responsible for import formalities for the goods which are subject to this cross-border customs procedure.",
             "rdfs:label": "importCustomsOfficeLocation",
@@ -1610,7 +1620,7 @@
                 "@id": "regulatory:Location"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:RegulatoryProcedure"
+                "@id": "regulatory:Cross-BorderRegulatoryProcedure"
             },
             "rdfs:comment": "The location of the specified customs office which is responsible for import formalities for the goods which are subject to this cross-border regulatory procedure.",
             "rdfs:label": "importCustomsOfficeSpecifiedLocation",
@@ -1631,7 +1641,7 @@
                 "@id": "xsd:string"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:CustomsProcedure"
+                "@id": "regulatory:Cross-BorderCustomsProcedure"
             },
             "rdfs:comment": "Information, expressed as text, for this cross-border customs procedure.",
             "rdfs:label": "information",
@@ -1651,9 +1661,14 @@
             "schema:rangeIncludes": {
                 "@id": "xsd:dateTime"
             },
-            "schema:domainIncludes": {
-                "@id": "regulatory:Declaration"
-            },
+            "schema:domainIncludes": [
+                {
+                    "@id": "regulatory:ExchangedDeclaration"
+                },
+                {
+                    "@id": "regulatory:SpecifiedDeclaration"
+                }
+            ],
             "rdfs:comment": [
                 "The date, time, date time or other date time value for the issuance of this exchanged declaration.",
                 "The issue date, time, date time or other date time value for this specified declaration."
@@ -1684,7 +1699,7 @@
                 "@id": "regulatory:Party"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:Declaration"
+                "@id": "regulatory:SpecifiedDeclaration"
             },
             "rdfs:comment": "A party that issues this specified declaration.",
             "rdfs:label": "issuerParty",
@@ -1705,7 +1720,7 @@
                 "@id": "xsd:dateTime"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:Declaration"
+                "@id": "regulatory:ExchangedDeclaration"
             },
             "rdfs:comment": "The date, time, date time or other date time value when the items which are a subject of this exchanged declaration enter a jurisdiction, such as the actual date of arrival of a means of transport.",
             "rdfs:label": "jurisdictionEntryDateTime",
@@ -1727,7 +1742,7 @@
                 "@id": "xsd:token"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:CustomsValuation"
+                "@id": "regulatory:Cross-BorderCustomsValuation"
             },
             "rdfs:comment": "The code specifying the method by which this cross-border customs valuation is determined.",
             "rdfs:label": "methodCode",
@@ -1749,7 +1764,7 @@
                 "@id": "xsd:string"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:Declaration"
+                "@id": "regulatory:SpecifiedDeclaration"
             },
             "rdfs:comment": "A name, expressed as text, for this specified declaration.",
             "rdfs:label": "name",
@@ -1770,7 +1785,7 @@
                 "@id": "xsd:decimal"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:RegulatoryProcedure"
+                "@id": "regulatory:Cross-BorderRegulatoryProcedure"
             },
             "rdfs:comment": "A monetary value of all non-tariff charges for this cross-border regulatory procedure.",
             "rdfs:label": "nonTariffChargeAmount",
@@ -1792,10 +1807,10 @@
             },
             "schema:domainIncludes": [
                 {
-                    "@id": "regulatory:CustomsProcedure"
+                    "@id": "regulatory:Cross-BorderCustomsProcedure"
                 },
                 {
-                    "@id": "regulatory:RegulatoryProcedure"
+                    "@id": "regulatory:Cross-BorderRegulatoryProcedure"
                 }
             ],
             "rdfs:comment": [
@@ -1827,7 +1842,7 @@
                 "@id": "xsd:decimal"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:CustomsValuation"
+                "@id": "regulatory:Cross-BorderCustomsValuation"
             },
             "rdfs:comment": "A monetary value added or subtracted from the total invoice price not previously taken into account for this cross-border customs valuation.",
             "rdfs:label": "otherChargeAmount",
@@ -1848,7 +1863,7 @@
                 "@id": "xsd:decimal"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:CustomsProcedure"
+                "@id": "regulatory:Cross-BorderCustomsProcedure"
             },
             "rdfs:comment": "The monetary value of all other charges payable for this cross-border customs procedure.",
             "rdfs:label": "otherChargesPayableAmount",
@@ -1869,7 +1884,7 @@
                 "@id": "regulatory:FinancialAccount"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:CustomsProcedure"
+                "@id": "regulatory:Cross-BorderCustomsProcedure"
             },
             "rdfs:comment": "A debtor financial account specified for the payer of the trade transaction for this cross-border customs procedure.",
             "rdfs:label": "payerSpecifiedFinancialAccount",
@@ -1891,10 +1906,10 @@
             },
             "schema:domainIncludes": [
                 {
-                    "@id": "regulatory:CustomsProcedure"
+                    "@id": "regulatory:Cross-BorderCustomsProcedure"
                 },
                 {
-                    "@id": "regulatory:RegulatoryProcedure"
+                    "@id": "regulatory:Cross-BorderRegulatoryProcedure"
                 }
             ],
             "rdfs:comment": [
@@ -1927,10 +1942,10 @@
             },
             "schema:domainIncludes": [
                 {
-                    "@id": "regulatory:CustomsProcedure"
+                    "@id": "regulatory:Cross-BorderCustomsProcedure"
                 },
                 {
-                    "@id": "regulatory:RegulatoryProcedure"
+                    "@id": "regulatory:Cross-BorderRegulatoryProcedure"
                 }
             ],
             "rdfs:comment": [
@@ -1964,13 +1979,13 @@
             },
             "schema:domainIncludes": [
                 {
-                    "@id": "regulatory:CustomsProcedure"
+                    "@id": "regulatory:Cross-BorderCustomsProcedure"
                 },
                 {
-                    "@id": "regulatory:Declaration"
+                    "@id": "regulatory:Cross-BorderRegulatoryProcedure"
                 },
                 {
-                    "@id": "regulatory:RegulatoryProcedure"
+                    "@id": "regulatory:ExchangedDeclaration"
                 }
             ],
             "rdfs:comment": [
@@ -2010,7 +2025,7 @@
                 "@id": "xsd:token"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:CustomsProcedure"
+                "@id": "regulatory:Cross-BorderCustomsProcedure"
             },
             "rdfs:comment": "The code specifying the customs procedure which has been completed prior to this cross-border customs procedure.",
             "rdfs:label": "previousProcedureCode",
@@ -2031,7 +2046,7 @@
                 "@id": "xsd:token"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:RegulatoryProcedure"
+                "@id": "regulatory:Cross-BorderRegulatoryProcedure"
             },
             "rdfs:comment": "A code specifying a type of previous procedure for this cross-border regulatory procedure.",
             "rdfs:label": "previousProcedureTypeCode",
@@ -2053,7 +2068,7 @@
                 "@id": "regulatory:Party"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:Declaration"
+                "@id": "regulatory:ExchangedDeclaration"
             },
             "rdfs:comment": "A principal trade party associated with this exchanged declaration.",
             "rdfs:label": "principalAssociatedParty",
@@ -2074,7 +2089,7 @@
                 "@id": "xsd:token"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:Declaration"
+                "@id": "regulatory:ExchangedDeclaration"
             },
             "rdfs:comment": "A code specifying a procedure for this exchanged declaration.",
             "rdfs:label": "procedureCode",
@@ -2095,7 +2110,7 @@
                 "@id": "xsd:token"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:RegulatoryProcedure"
+                "@id": "regulatory:Cross-BorderRegulatoryProcedure"
             },
             "rdfs:comment": "A quota identifier for this cross-border regulatory procedure.",
             "rdfs:label": "quotaId",
@@ -2116,7 +2131,7 @@
                 "@id": "regulatory:Document"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:RegulatoryProcedure"
+                "@id": "regulatory:Cross-BorderRegulatoryProcedure"
             },
             "rdfs:comment": "A document referenced by this cross-border regulatory procedure.",
             "rdfs:label": "referencedDocument",
@@ -2137,7 +2152,7 @@
                 "@id": "xsd:token"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:RegulatoryProcedure"
+                "@id": "regulatory:Cross-BorderRegulatoryProcedure"
             },
             "rdfs:comment": "The identifier of the registered deferred payment payer for this cross-border regulatory procedure.",
             "rdfs:label": "registeredDeferredPaymentPayerId",
@@ -2158,7 +2173,7 @@
                 "@id": "xsd:string"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:RegulatoryProcedure"
+                "@id": "regulatory:Cross-BorderRegulatoryProcedure"
             },
             "rdfs:comment": "A remark, expressed as text, for this cross-border regulatory procedure.",
             "rdfs:label": "remark",
@@ -2180,10 +2195,10 @@
             },
             "schema:domainIncludes": [
                 {
-                    "@id": "regulatory:CustomsProcedure"
+                    "@id": "regulatory:Cross-BorderCustomsProcedure"
                 },
                 {
-                    "@id": "regulatory:RegulatoryProcedure"
+                    "@id": "regulatory:Cross-BorderRegulatoryProcedure"
                 }
             ],
             "rdfs:comment": [
@@ -2216,10 +2231,10 @@
             },
             "schema:domainIncludes": [
                 {
-                    "@id": "regulatory:CustomsProcedure"
+                    "@id": "regulatory:Cross-BorderCustomsProcedure"
                 },
                 {
-                    "@id": "regulatory:RegulatoryProcedure"
+                    "@id": "regulatory:Cross-BorderRegulatoryProcedure"
                 }
             ],
             "rdfs:comment": [
@@ -2252,7 +2267,7 @@
                 "@id": "regulatory:ChemicalTreatment"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:RegulatoryProcedure"
+                "@id": "regulatory:Cross-BorderRegulatoryProcedure"
             },
             "rdfs:comment": "A chemical treatment applied as required by this cross-border regulatory procedure.",
             "rdfs:label": "requiredChemicalTreatment",
@@ -2273,7 +2288,7 @@
                 "@id": "regulatory:Seal"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:RegulatoryProcedure"
+                "@id": "regulatory:Cross-BorderRegulatoryProcedure"
             },
             "rdfs:comment": "A seal required by this cross-border regulatory procedure.",
             "rdfs:label": "requiredSeal",
@@ -2294,7 +2309,7 @@
                 "@id": "regulatory:TestSpecificationReport"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:RegulatoryProcedure"
+                "@id": "regulatory:Cross-BorderRegulatoryProcedure"
             },
             "rdfs:comment": "A report of a certification test and its attributes that is required for this cross-border regulatory procedure.",
             "rdfs:label": "requiredTestSpecificationReport",
@@ -2315,7 +2330,7 @@
                 "@id": "unece:UNECECL9411Code"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:RegulatoryProcedure"
+                "@id": "regulatory:Cross-BorderRegulatoryProcedure"
             },
             "rdfs:comment": "A code specifying a responsible agency involved in this cross-border regulatory procedure.",
             "rdfs:label": "responsibleGovernmentAgencyInvolvementResponsibleAgencyInvolvementCode",
@@ -2337,7 +2352,7 @@
                 "@id": "unece:UNECECL9415Code"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:RegulatoryProcedure"
+                "@id": "regulatory:Cross-BorderRegulatoryProcedure"
             },
             "rdfs:comment": "The code specifying the agency responsible for this cross-border regulatory procedure.",
             "rdfs:label": "responsibleGovernmentAgencyResponsibleAgencyCode",
@@ -2359,7 +2374,7 @@
                 "@id": "xsd:boolean"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:CustomsValuation"
+                "@id": "regulatory:Cross-BorderCustomsValuation"
             },
             "rdfs:comment": "The indication of whether or not there is a royalty or licence fee related to the goods for this cross-border customs valuation.",
             "rdfs:label": "royaltyLicenseFeeIndicator",
@@ -2380,7 +2395,7 @@
                 "@id": "xsd:boolean"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:CustomsValuation"
+                "@id": "regulatory:Cross-BorderCustomsValuation"
             },
             "rdfs:comment": "The indication of whether or not there is a condition imposed on the sale price of the goods for this cross-border customs valuation.",
             "rdfs:label": "salePriceConditionIndicator",
@@ -2401,7 +2416,7 @@
                 "@id": "xsd:boolean"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:CustomsValuation"
+                "@id": "regulatory:Cross-BorderCustomsValuation"
             },
             "rdfs:comment": "The indication of whether or not there is any restriction imposed on the sale of the goods for this cross-border customs valuation.",
             "rdfs:label": "saleRestrictionIndicator",
@@ -2422,7 +2437,7 @@
                 "@id": "xsd:token"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:Declaration"
+                "@id": "regulatory:ExchangedDeclaration"
             },
             "rdfs:comment": "The code specifying a specific circumstance in this exchanged declaration.",
             "rdfs:label": "specificCircumstanceCode",
@@ -2443,7 +2458,7 @@
                 "@id": "regulatory:CustomsProcedure"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:RegulatoryProcedure"
+                "@id": "regulatory:Cross-BorderRegulatoryProcedure"
             },
             "rdfs:comment": "A customs procedure specified for this cross-border regulatory procedure.",
             "rdfs:label": "specifiedCustomsProcedure",
@@ -2464,7 +2479,7 @@
                 "@id": "regulatory:FinancialAccount"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:RegulatoryProcedure"
+                "@id": "regulatory:Cross-BorderRegulatoryProcedure"
             },
             "rdfs:comment": "A debtor financial account specified for this cross-border regulatory procedure.",
             "rdfs:label": "specifiedFinancialAccount",
@@ -2486,10 +2501,10 @@
             },
             "schema:domainIncludes": [
                 {
-                    "@id": "regulatory:CustomsProcedure"
+                    "@id": "regulatory:Cross-BorderCustomsProcedure"
                 },
                 {
-                    "@id": "regulatory:RegulatoryProcedure"
+                    "@id": "regulatory:Cross-BorderRegulatoryProcedure"
                 }
             ],
             "rdfs:comment": [
@@ -2521,7 +2536,7 @@
                 "@id": "xsd:decimal"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:CustomsProcedure"
+                "@id": "regulatory:Cross-BorderCustomsProcedure"
             },
             "rdfs:comment": "A statistical tariff quantity, used for the calculation of duty, under this cross-border customs procedure.",
             "rdfs:label": "statisticalTariffQuantity",
@@ -2542,7 +2557,7 @@
                 "@id": "xsd:decimal"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:Declaration"
+                "@id": "regulatory:ExchangedDeclaration"
             },
             "rdfs:comment": "The monetary value specified for statistical purposes in this exchanged declaration.",
             "rdfs:label": "statisticalValueSpecifiedAmount",
@@ -2564,7 +2579,7 @@
                 "@id": "xsd:token"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:Declaration"
+                "@id": "regulatory:SpecifiedDeclaration"
             },
             "rdfs:comment": "A code specifying a subject type for this specified declaration.",
             "rdfs:label": "subjectTypeCode",
@@ -2585,7 +2600,7 @@
                 "@id": "regulatory:Location"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:Declaration"
+                "@id": "regulatory:ExchangedDeclaration"
             },
             "rdfs:comment": "The submission location for this exchanged declaration.",
             "rdfs:label": "submissionLocation",
@@ -2606,7 +2621,7 @@
                 "@id": "xsd:token"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:CustomsProcedure"
+                "@id": "regulatory:Cross-BorderCustomsProcedure"
             },
             "rdfs:comment": "A code specifying a subordinate category for this cross-border customs procedure.",
             "rdfs:label": "subordinateCategoryCode",
@@ -2627,7 +2642,7 @@
                 "@id": "xsd:decimal"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:CustomsProcedure"
+                "@id": "regulatory:Cross-BorderCustomsProcedure"
             },
             "rdfs:comment": "A supplementary tariff quantity, used for the calculation of duty, under this cross-border customs procedure.",
             "rdfs:label": "supplementaryTariffQuantity",
@@ -2648,7 +2663,7 @@
                 "@id": "xsd:decimal"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:RegulatoryProcedure"
+                "@id": "regulatory:Cross-BorderRegulatoryProcedure"
             },
             "rdfs:comment": "A monetary value of a tariff for this cross-border regulatory procedure.",
             "rdfs:label": "tariffAmount",
@@ -2670,10 +2685,10 @@
             },
             "schema:domainIncludes": [
                 {
-                    "@id": "regulatory:CustomsProcedure"
+                    "@id": "regulatory:Cross-BorderCustomsProcedure"
                 },
                 {
-                    "@id": "regulatory:RegulatoryProcedure"
+                    "@id": "regulatory:Cross-BorderRegulatoryProcedure"
                 }
             ],
             "rdfs:comment": [
@@ -2707,10 +2722,10 @@
             },
             "schema:domainIncludes": [
                 {
-                    "@id": "regulatory:CustomsProcedure"
+                    "@id": "regulatory:Cross-BorderCustomsProcedure"
                 },
                 {
-                    "@id": "regulatory:RegulatoryProcedure"
+                    "@id": "regulatory:Cross-BorderRegulatoryProcedure"
                 }
             ],
             "rdfs:comment": [
@@ -2743,7 +2758,7 @@
                 "@id": "xsd:token"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:CustomsProcedure"
+                "@id": "regulatory:Cross-BorderCustomsProcedure"
             },
             "rdfs:comment": "The identifier of the tariff quota for this cross-border customs procedure.",
             "rdfs:label": "tariffQuotaId",
@@ -2764,7 +2779,7 @@
                 "@id": "xsd:decimal"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:CustomsProcedure"
+                "@id": "regulatory:Cross-BorderCustomsProcedure"
             },
             "rdfs:comment": "The third tariff quantity, used for the calculation of duty, under this cross-border customs procedure.",
             "rdfs:label": "thirdTariffQuantity",
@@ -2785,7 +2800,7 @@
                 "@id": "xsd:decimal"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:RegulatoryProcedure"
+                "@id": "regulatory:Cross-BorderRegulatoryProcedure"
             },
             "rdfs:comment": "A monetary value of the total charges, including tariff and non-tariff charges, for this cross-border regulatory procedure.",
             "rdfs:label": "totalChargeAmount",
@@ -2807,10 +2822,10 @@
             },
             "schema:domainIncludes": [
                 {
-                    "@id": "regulatory:CustomsProcedure"
+                    "@id": "regulatory:Cross-BorderCustomsProcedure"
                 },
                 {
-                    "@id": "regulatory:RegulatoryProcedure"
+                    "@id": "regulatory:Cross-BorderRegulatoryProcedure"
                 }
             ],
             "rdfs:comment": [
@@ -2843,7 +2858,7 @@
                 "@id": "xsd:decimal"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:Declaration"
+                "@id": "regulatory:ExchangedDeclaration"
             },
             "rdfs:comment": "The total invoice monetary value specified in this exchanged declaration.",
             "rdfs:label": "totalInvoiceSpecifiedAmount",
@@ -2865,7 +2880,7 @@
                 "@id": "xsd:decimal"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:Declaration"
+                "@id": "regulatory:ExchangedDeclaration"
             },
             "rdfs:comment": "The total package quantity specified in this exchanged declaration.",
             "rdfs:label": "totalPackageSpecifiedQuantity",
@@ -2886,7 +2901,7 @@
                 "@id": "xsd:decimal"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:CustomsProcedure"
+                "@id": "regulatory:Cross-BorderCustomsProcedure"
             },
             "rdfs:comment": "The monetary value of the total payable for this cross-border customs procedure including duty and other charges.",
             "rdfs:label": "totalPayableAmount",
@@ -2908,10 +2923,10 @@
             },
             "schema:domainIncludes": [
                 {
-                    "@id": "regulatory:CustomsProcedure"
+                    "@id": "regulatory:Cross-BorderCustomsProcedure"
                 },
                 {
-                    "@id": "regulatory:RegulatoryProcedure"
+                    "@id": "regulatory:Cross-BorderRegulatoryProcedure"
                 }
             ],
             "rdfs:comment": [
@@ -2943,7 +2958,7 @@
                 "@id": "regulatory:Location"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:CustomsProcedure"
+                "@id": "regulatory:Cross-BorderCustomsProcedure"
             },
             "rdfs:comment": "The location at which the consignment is destined under a transit cross-border customs procedure.",
             "rdfs:label": "transitConsignmentDestinationLocation",
@@ -2964,7 +2979,7 @@
                 "@id": "xsd:decimal"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:CustomsProcedure"
+                "@id": "regulatory:Cross-BorderCustomsProcedure"
             },
             "rdfs:comment": "The transit control duration measure of time for this cross-border customs procedure, such as the number of days or hours.",
             "rdfs:label": "transitControlDurationMeasure",
@@ -2985,7 +3000,7 @@
                 "@id": "regulatory:Location"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:CustomsProcedure"
+                "@id": "regulatory:Cross-BorderCustomsProcedure"
             },
             "rdfs:comment": "The location of a customs office which is responsible for transit formalities en route for the goods which are subject to this cross-border customs procedure.",
             "rdfs:label": "transitCustomsOfficeLocation",
@@ -3006,7 +3021,7 @@
                 "@id": "regulatory:Location"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:RegulatoryProcedure"
+                "@id": "regulatory:Cross-BorderRegulatoryProcedure"
             },
             "rdfs:comment": "A location of a specified customs office which is responsible for transit formalities en route for the goods which are subject to this cross-border regulatory procedure.",
             "rdfs:label": "transitCustomsOfficeSpecifiedLocation",
@@ -3027,7 +3042,7 @@
                 "@id": "regulatory:Location"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:CustomsProcedure"
+                "@id": "regulatory:Cross-BorderCustomsProcedure"
             },
             "rdfs:comment": "The location of the customs office at which the goods which are subject to this cross-border customs procedure are released from a customs transit regime.",
             "rdfs:label": "transitReleaseCustomsOfficeLocation",
@@ -3048,7 +3063,7 @@
                 "@id": "regulatory:Location"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:RegulatoryProcedure"
+                "@id": "regulatory:Cross-BorderRegulatoryProcedure"
             },
             "rdfs:comment": "A location of a specified customs office at which the goods which are subject to this cross-border regulatory procedure are released from a customs transit regime.",
             "rdfs:label": "transitReleaseCustomsOfficeSpecifiedLocation",
@@ -3069,7 +3084,7 @@
                 "@id": "unece:UNECECL8323Code"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:RegulatoryProcedure"
+                "@id": "regulatory:Cross-BorderRegulatoryProcedure"
             },
             "rdfs:comment": "A code specifying the transport movement type, such as import, export, transit, for this cross-border regulatory procedure.",
             "rdfs:label": "transportMovementTypeCode",
@@ -3091,7 +3106,7 @@
                 "@id": "regulatory:Event"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:RegulatoryProcedure"
+                "@id": "regulatory:Cross-BorderRegulatoryProcedure"
             },
             "rdfs:comment": "A treatment event for this cross-border regulatory procedure.",
             "rdfs:label": "treatmentEvent",
@@ -3113,13 +3128,13 @@
             },
             "schema:domainIncludes": [
                 {
-                    "@id": "regulatory:CustomsProcedure"
+                    "@id": "regulatory:Cross-BorderCustomsProcedure"
                 },
                 {
-                    "@id": "regulatory:CustomsValuation"
+                    "@id": "regulatory:Cross-BorderCustomsValuation"
                 },
                 {
-                    "@id": "regulatory:Declaration"
+                    "@id": "regulatory:SpecifiedDeclaration"
                 }
             ],
             "rdfs:comment": [
@@ -3160,7 +3175,7 @@
                 "@id": "xsd:decimal"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:RegulatoryProcedure"
+                "@id": "regulatory:Cross-BorderRegulatoryProcedure"
             },
             "rdfs:comment": "The quantity of the quota used to date under this cross-border regulatory procedure.",
             "rdfs:label": "usedToDateQuotaQuantity",
@@ -3181,7 +3196,7 @@
                 "@id": "xsd:decimal"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:RegulatoryProcedure"
+                "@id": "regulatory:Cross-BorderRegulatoryProcedure"
             },
             "rdfs:comment": "The monetary value of the basis on which the valuation is, or will be, calculated for this cross-border regulatory procedure.",
             "rdfs:label": "valuationBasisAmount",
@@ -3203,7 +3218,7 @@
                 "@id": "regulatory:Object"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:Declaration"
+                "@id": "regulatory:SpecifiedDeclaration"
             },
             "rdfs:comment": "An object verified for this specified declaration.",
             "rdfs:label": "verifiedObject",
@@ -3224,7 +3239,7 @@
                 "@id": "xsd:token"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:Declaration"
+                "@id": "regulatory:ExchangedDeclaration"
             },
             "rdfs:comment": "The identifier for the version of this exchanged declaration.",
             "rdfs:label": "versionId",
@@ -3245,7 +3260,7 @@
                 "@id": "xsd:token"
             },
             "schema:domainIncludes": {
-                "@id": "regulatory:CustomsValuation"
+                "@id": "regulatory:Cross-BorderCustomsValuation"
             },
             "rdfs:comment": "The code specifying any additions necessary under the World Trade Organization (WTO) Valuation Agreement used for the assessment of this cross-border customs valuation.",
             "rdfs:label": "wTOAdditionCode",
