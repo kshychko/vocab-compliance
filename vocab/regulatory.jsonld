@@ -1,0 +1,3264 @@
+
+{
+    "@context": {
+        "unece": "https://service.unece.org/trade/uncefact/vocabulary/unece#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "schema": "http://schema.org/",
+        "regulatory": "https://service.unece.org/trade/uncefact/vocabulary/unece/regulatory#",
+        "cefact": "https://service.unece.org/trade/uncefact/vocabulary/cefact#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@graph": [
+        {
+            "@id": "regulatory:CustomsProcedure",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Any procedure based on the World Customs Organization (WCO) Kyoto Convention and related to the movement of internationally traded goods across borders.",
+            "rdfs:label": "CustomsProcedure",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_CustomsProcedure.Details",
+                    "@type": "unece:AggregateBIE",
+                    "unece:cefactUNId": "UN01003433",
+                    "rdfs:comment": "Any procedure based on the World Customs Organization (WCO) Kyoto Convention and related to the movement of internationally traded goods across borders."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:CustomsValuation",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "A cross-border trade related assessment of the worth of an object, such as its monetary value, for customs purposes.",
+            "rdfs:label": "CustomsValuation",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_CustomsValuation.Details",
+                    "@type": "unece:AggregateBIE",
+                    "unece:cefactUNId": "UN01003483",
+                    "rdfs:comment": "A cross-border trade related assessment of the worth of an object, such as its monetary value, for customs purposes."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:Declaration",
+            "@type": "rdfs:Class",
+            "rdfs:comment": [
+                "An act of notification by formal documentation or action, in any form prescribed or accepted, such as a self-declaration.",
+                "A collection of data for a piece of written, printed or electronic matter that is exchanged between two parties as a formal declaration."
+            ],
+            "rdfs:label": "Declaration",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Specified_Declaration.Details",
+                    "@type": "unece:AggregateBIE",
+                    "unece:cefactUNId": "UN01015056",
+                    "rdfs:comment": "An act of notification by formal documentation or action, in any form prescribed or accepted, such as a self-declaration."
+                },
+                {
+                    "@id": "cefact:Exchanged_Declaration.Details",
+                    "@type": "unece:AggregateBIE",
+                    "unece:cefactUNId": "UN01011006",
+                    "rdfs:comment": "A collection of data for a piece of written, printed or electronic matter that is exchanged between two parties as a formal declaration."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:RegulatoryProcedure",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "A set of formal steps to satisfy a cross-border regulation, law or convention.",
+            "rdfs:label": "RegulatoryProcedure",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_RegulatoryProcedure.Details",
+                    "@type": "unece:AggregateBIE",
+                    "unece:cefactUNId": "UN01006147",
+                    "rdfs:comment": "A set of formal steps to satisfy a cross-border regulation, law or convention."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:acquisitionDateTime",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "xsd:dateTime"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:RegulatoryProcedure"
+            },
+            "rdfs:comment": "The date, time, date time, or other date time value of an acquisition for this cross-border regulatory procedure.",
+            "rdfs:label": "acquisitionDateTime",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_RegulatoryProcedure.Acquisition.DateTime",
+                    "@type": "unece:BasicBIE",
+                    "unece:cefactUNId": "UN01006174",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_RegulatoryProcedure.Details",
+                    "rdfs:comment": "The date, time, date time, or other date time value of an acquisition for this cross-border regulatory procedure."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:addedAdjustmentAmount",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "xsd:decimal"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:CustomsValuation"
+            },
+            "rdfs:comment": "The monetary value of the adjustment added for this cross-border customs valuation.",
+            "rdfs:label": "addedAdjustmentAmount",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_CustomsValuation.Added_Adjustment.Amount",
+                    "@type": "unece:BasicBIE",
+                    "unece:TDED": "5514",
+                    "unece:cefactUNId": "UN01003484",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_CustomsValuation.Details",
+                    "rdfs:comment": "The monetary value of the adjustment added for this cross-border customs valuation."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:addedAdjustmentPercent",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "xsd:decimal"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:CustomsValuation"
+            },
+            "rdfs:comment": "The adjustment added, expressed as a percentage, for this cross-border customs valuation.",
+            "rdfs:label": "addedAdjustmentPercent",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_CustomsValuation.Added_Adjustment.Percent",
+                    "@type": "unece:BasicBIE",
+                    "unece:TDED": "5510",
+                    "unece:cefactUNId": "UN01003486",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_CustomsValuation.Details",
+                    "rdfs:comment": "The adjustment added, expressed as a percentage, for this cross-border customs valuation."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:additionalDocument",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "regulatory:Document"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:CustomsProcedure"
+            },
+            "rdfs:comment": "An additional referenced document for this cross-border customs procedure.",
+            "rdfs:label": "additionalDocument",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_CustomsProcedure.Additional.Referenced_Document",
+                    "@type": "unece:AssociationBIE",
+                    "unece:cefactUNId": "UN01003468",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_CustomsProcedure.Details",
+                    "rdfs:comment": "An additional referenced document for this cross-border customs procedure."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:additionalStatementNote",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "regulatory:Note"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:Declaration"
+            },
+            "rdfs:comment": "An additional statement note for this exchanged declaration.",
+            "rdfs:label": "additionalStatementNote",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Exchanged_Declaration.Additional_Statement.Note",
+                    "@type": "unece:AssociationBIE",
+                    "unece:cefactUNId": "UN01011026",
+                    "unece:cefactBieDomainClass": "cefact:Exchanged_Declaration.Details",
+                    "rdfs:comment": "An additional statement note for this exchanged declaration."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:additionalValuationBasisAmount",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "xsd:decimal"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:CustomsProcedure"
+            },
+            "rdfs:comment": "The monetary value of an additional basis on which the valuation is, or will be, calculated for this cross-border customs procedure.",
+            "rdfs:label": "additionalValuationBasisAmount",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_CustomsProcedure.Additional_ValuationBasis.Amount",
+                    "@type": "unece:BasicBIE",
+                    "unece:cefactUNId": "UN01003443",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_CustomsProcedure.Details",
+                    "rdfs:comment": "The monetary value of an additional basis on which the valuation is, or will be, calculated for this cross-border customs procedure."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:amendmentReasonCode",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "xsd:token"
+            },
+            "schema:domainIncludes": [
+                {
+                    "@id": "regulatory:CustomsProcedure"
+                },
+                {
+                    "@id": "regulatory:RegulatoryProcedure"
+                }
+            ],
+            "rdfs:comment": [
+                "A code specifying a reason for an amendment to this cross-border customs procedure.",
+                "A code specifying a reason for an amendment to this cross-border regulatory procedure."
+            ],
+            "rdfs:label": "amendmentReasonCode",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_RegulatoryProcedure.AmendmentReason.Code",
+                    "@type": "unece:BasicBIE",
+                    "unece:cefactUNId": "UN01006170",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_RegulatoryProcedure.Details",
+                    "rdfs:comment": "A code specifying a reason for an amendment to this cross-border regulatory procedure."
+                },
+                {
+                    "@id": "cefact:Cross-Border_CustomsProcedure.AmendmentReason.Code",
+                    "@type": "unece:BasicBIE",
+                    "unece:cefactUNId": "UN01003441",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_CustomsProcedure.Details",
+                    "rdfs:comment": "A code specifying a reason for an amendment to this cross-border customs procedure."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:annualQuotaQuantity",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "xsd:decimal"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:RegulatoryProcedure"
+            },
+            "rdfs:comment": "The annual quota quantity under this cross-border regulatory procedure.",
+            "rdfs:label": "annualQuotaQuantity",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_RegulatoryProcedure.Annual_Quota.Quantity",
+                    "@type": "unece:BasicBIE",
+                    "unece:cefactUNId": "UN01006173",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_RegulatoryProcedure.Details",
+                    "rdfs:comment": "The annual quota quantity under this cross-border regulatory procedure."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:applicableCurrencyExchange",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "regulatory:CurrencyExchange"
+            },
+            "schema:domainIncludes": [
+                {
+                    "@id": "regulatory:CustomsProcedure"
+                },
+                {
+                    "@id": "regulatory:CustomsValuation"
+                },
+                {
+                    "@id": "regulatory:RegulatoryProcedure"
+                }
+            ],
+            "rdfs:comment": [
+                "The applicable currency exchange for this cross-border regulatory procedure.",
+                "The currency exchange details applicable to this cross-border customs procedure.",
+                "The trade related currency exchange applicable to this cross-border customs valuation."
+            ],
+            "rdfs:label": "applicableCurrencyExchange",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_CustomsValuation.Applicable.Trade_CurrencyExchange",
+                    "@type": "unece:AssociationBIE",
+                    "unece:cefactUNId": "UN01003497",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_CustomsValuation.Details",
+                    "rdfs:comment": "The trade related currency exchange applicable to this cross-border customs valuation."
+                },
+                {
+                    "@id": "cefact:Cross-Border_CustomsProcedure.Applicable.Trade_CurrencyExchange",
+                    "@type": "unece:AssociationBIE",
+                    "unece:cefactUNId": "UN01003479",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_CustomsProcedure.Details",
+                    "rdfs:comment": "The currency exchange details applicable to this cross-border customs procedure."
+                },
+                {
+                    "@id": "cefact:Cross-Border_RegulatoryProcedure.Applicable.Trade_CurrencyExchange",
+                    "@type": "unece:AssociationBIE",
+                    "unece:cefactUNId": "UN01006185",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_RegulatoryProcedure.Details",
+                    "rdfs:comment": "The applicable currency exchange for this cross-border regulatory procedure."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:applicableCustomsValuation",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "regulatory:CustomsValuation"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:Declaration"
+            },
+            "rdfs:comment": "Customs valuation information applicable to this exchanged declaration.",
+            "rdfs:label": "applicableCustomsValuation",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Exchanged_Declaration.Applicable.Cross-Border_CustomsValuation",
+                    "@type": "unece:AssociationBIE",
+                    "unece:cefactUNId": "UN01011023",
+                    "unece:cefactBieDomainClass": "cefact:Exchanged_Declaration.Details",
+                    "rdfs:comment": "Customs valuation information applicable to this exchanged declaration."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:applicablePeriod",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "regulatory:Period"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:RegulatoryProcedure"
+            },
+            "rdfs:comment": "A period applicable to this cross-border regulatory procedure.",
+            "rdfs:label": "applicablePeriod",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_RegulatoryProcedure.Applicable.Specified_Period",
+                    "@type": "unece:AssociationBIE",
+                    "unece:cefactUNId": "UN01008967",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_RegulatoryProcedure.Details",
+                    "rdfs:comment": "A period applicable to this cross-border regulatory procedure."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:applicableTax",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "regulatory:Tax"
+            },
+            "schema:domainIncludes": [
+                {
+                    "@id": "regulatory:CustomsProcedure"
+                },
+                {
+                    "@id": "regulatory:RegulatoryProcedure"
+                }
+            ],
+            "rdfs:comment": [
+                "A tax, levy or duty applicable to this cross-border customs procedure.",
+                "A tax, levy or duty applicable to this cross-border regulatory procedure."
+            ],
+            "rdfs:label": "applicableTax",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_CustomsProcedure.Applicable.Trade_Tax",
+                    "@type": "unece:AssociationBIE",
+                    "unece:cefactUNId": "UN01003466",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_CustomsProcedure.Details",
+                    "rdfs:comment": "A tax, levy or duty applicable to this cross-border customs procedure."
+                },
+                {
+                    "@id": "cefact:Cross-Border_RegulatoryProcedure.Applicable.Trade_Tax",
+                    "@type": "unece:AssociationBIE",
+                    "unece:cefactUNId": "UN01006177",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_RegulatoryProcedure.Details",
+                    "rdfs:comment": "A tax, levy or duty applicable to this cross-border regulatory procedure."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:associatedDocument",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "regulatory:Document"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:Declaration"
+            },
+            "rdfs:comment": "A referenced document associated with this exchanged declaration.",
+            "rdfs:label": "associatedDocument",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Exchanged_Declaration.Associated.Referenced_Document",
+                    "@type": "unece:AssociationBIE",
+                    "unece:cefactUNId": "UN01011027",
+                    "unece:cefactBieDomainClass": "cefact:Exchanged_Declaration.Details",
+                    "rdfs:comment": "A referenced document associated with this exchanged declaration."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:associatedStandard",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "regulatory:Standard"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:Declaration"
+            },
+            "rdfs:comment": "A referenced standard associated with this specified declaration.",
+            "rdfs:label": "associatedStandard",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Specified_Declaration.Associated.Referenced_Standard",
+                    "@type": "unece:AssociationBIE",
+                    "unece:cefactUNId": "UN01015066",
+                    "unece:cefactBieDomainClass": "cefact:Specified_Declaration.Details",
+                    "rdfs:comment": "A referenced standard associated with this specified declaration."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:assuranceLevelCode",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "xsd:token"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:Declaration"
+            },
+            "rdfs:comment": "A code specifying an assurance level of this specified declaration.",
+            "rdfs:label": "assuranceLevelCode",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Specified_Declaration.AssuranceLevel.Code",
+                    "@type": "unece:BasicBIE",
+                    "unece:cefactUNId": "UN01015063",
+                    "unece:cefactBieDomainClass": "cefact:Specified_Declaration.Details",
+                    "rdfs:comment": "A code specifying an assurance level of this specified declaration."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:borderClearanceInstructions",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "regulatory:Instructions"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:RegulatoryProcedure"
+            },
+            "rdfs:comment": "Border clearance instructions for this cross-border regulatory procedure.",
+            "rdfs:label": "borderClearanceInstructions",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_RegulatoryProcedure.BorderClearance.Transport_Instructions",
+                    "@type": "unece:AssociationBIE",
+                    "unece:cefactUNId": "UN01008971",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_RegulatoryProcedure.Details",
+                    "rdfs:comment": "Border clearance instructions for this cross-border regulatory procedure."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:buyerSellerRelationshipIndicator",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "xsd:boolean"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:CustomsValuation"
+            },
+            "rdfs:comment": "The indication of whether or not there is a relationship between the buyer and the seller, such as a financial relationship, for this cross-border customs valuation.",
+            "rdfs:label": "buyerSellerRelationshipIndicator",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_CustomsValuation.BuyerSellerRelationship.Indicator",
+                    "@type": "unece:BasicBIE",
+                    "unece:cefactUNId": "UN01003492",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_CustomsValuation.Details",
+                    "rdfs:comment": "The indication of whether or not there is a relationship between the buyer and the seller, such as a financial relationship, for this cross-border customs valuation."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:buyerSellerRelationshipPriceInfluenceIndicator",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "xsd:boolean"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:CustomsValuation"
+            },
+            "rdfs:comment": "The indication of whether or not the buyer seller relationship influences the price of the goods for this cross-border customs valuation.",
+            "rdfs:label": "buyerSellerRelationshipPriceInfluenceIndicator",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_CustomsValuation.BuyerSellerRelationshipPriceInfluence.Indicator",
+                    "@type": "unece:BasicBIE",
+                    "unece:cefactUNId": "UN01003493",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_CustomsValuation.Details",
+                    "rdfs:comment": "The indication of whether or not the buyer seller relationship influences the price of the goods for this cross-border customs valuation."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:categoryCode",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "xsd:token"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:RegulatoryProcedure"
+            },
+            "rdfs:comment": "A code specifying a category for this cross-border regulatory procedure, such as the appendices of the CITES Convention.",
+            "rdfs:label": "categoryCode",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_RegulatoryProcedure.Category.Code",
+                    "@type": "unece:BasicBIE",
+                    "unece:cefactUNId": "UN01006171",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_RegulatoryProcedure.Details",
+                    "rdfs:comment": "A code specifying a category for this cross-border regulatory procedure, such as the appendices of the CITES Convention."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:certificationBasis",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "xsd:string"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:RegulatoryProcedure"
+            },
+            "rdfs:comment": "A basis for a certification, expressed as text, for this cross-border regulatory procedure.",
+            "rdfs:label": "certificationBasis",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_RegulatoryProcedure.CertificationBasis.Text",
+                    "@type": "unece:BasicBIE",
+                    "unece:cefactUNId": "UN01009038",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_RegulatoryProcedure.Details",
+                    "rdfs:comment": "A basis for a certification, expressed as text, for this cross-border regulatory procedure."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:chargeApportionMethodCode",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "xsd:token"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:CustomsValuation"
+            },
+            "rdfs:comment": "The code specifying the method of the apportion of charges for this cross-border customs valuation.",
+            "rdfs:label": "chargeApportionMethodCode",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_CustomsValuation.ChargeApportionMethod.Code",
+                    "@type": "unece:BasicBIE",
+                    "unece:TDED": "5513",
+                    "unece:cefactUNId": "UN01003490",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_CustomsValuation.Details",
+                    "rdfs:comment": "The code specifying the method of the apportion of charges for this cross-border customs valuation."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:consignmentCustomsValuation",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "regulatory:CustomsValuation"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:CustomsProcedure"
+            },
+            "rdfs:comment": "The customs valuation of the consignment subject to this cross-border customs procedure.",
+            "rdfs:label": "consignmentCustomsValuation",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_CustomsProcedure.Consignment.Cross-Border_CustomsValuation",
+                    "@type": "unece:AssociationBIE",
+                    "unece:cefactUNId": "UN01003465",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_CustomsProcedure.Details",
+                    "rdfs:comment": "The customs valuation of the consignment subject to this cross-border customs procedure."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:consignmentDestinationSpecifiedLocation",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "regulatory:Location"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:RegulatoryProcedure"
+            },
+            "rdfs:comment": "A consignment destination location specified for this cross-border regulatory procedure.",
+            "rdfs:label": "consignmentDestinationSpecifiedLocation",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_RegulatoryProcedure.ConsignmentDestination_Specified.Logistics_Location",
+                    "@type": "unece:AssociationBIE",
+                    "unece:cefactUNId": "UN01006184",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_RegulatoryProcedure.Details",
+                    "rdfs:comment": "A consignment destination location specified for this cross-border regulatory procedure."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:controlRequirementIndicator",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "xsd:boolean"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:RegulatoryProcedure"
+            },
+            "rdfs:comment": "The indication of whether or not a control is required for this cross-border regulatory procedure.",
+            "rdfs:label": "controlRequirementIndicator",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_RegulatoryProcedure.ControlRequirement.Indicator",
+                    "@type": "unece:BasicBIE",
+                    "unece:cefactUNId": "UN01006161",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_RegulatoryProcedure.Details",
+                    "rdfs:comment": "The indication of whether or not a control is required for this cross-border regulatory procedure."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:controlResult",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "xsd:string"
+            },
+            "schema:domainIncludes": [
+                {
+                    "@id": "regulatory:CustomsProcedure"
+                },
+                {
+                    "@id": "regulatory:RegulatoryProcedure"
+                }
+            ],
+            "rdfs:comment": [
+                "A control result, expressed as text, for this cross-border customs procedure.",
+                "A control result, expressed as text, for this cross-border regulatory procedure."
+            ],
+            "rdfs:label": "controlResult",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_RegulatoryProcedure.ControlResult.Text",
+                    "@type": "unece:BasicBIE",
+                    "unece:cefactUNId": "UN01006168",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_RegulatoryProcedure.Details",
+                    "rdfs:comment": "A control result, expressed as text, for this cross-border regulatory procedure."
+                },
+                {
+                    "@id": "cefact:Cross-Border_CustomsProcedure.ControlResult.Text",
+                    "@type": "unece:BasicBIE",
+                    "unece:cefactUNId": "UN01003463",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_CustomsProcedure.Details",
+                    "rdfs:comment": "A control result, expressed as text, for this cross-border customs procedure."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:controlStartDateConfirmationIndicator",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "xsd:boolean"
+            },
+            "schema:domainIncludes": [
+                {
+                    "@id": "regulatory:CustomsProcedure"
+                },
+                {
+                    "@id": "regulatory:RegulatoryProcedure"
+                }
+            ],
+            "rdfs:comment": [
+                "The indication of whether or not the start date of a control has been confirmed for this cross-border regulatory procedure.",
+                "The indication of whether or not the start date of a customs control has been confirmed for this cross-border customs procedure."
+            ],
+            "rdfs:label": "controlStartDateConfirmationIndicator",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_RegulatoryProcedure.ControlStartDateConfirmation.Indicator",
+                    "@type": "unece:BasicBIE",
+                    "unece:TDED": "2056",
+                    "unece:cefactUNId": "UN01006160",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_RegulatoryProcedure.Details",
+                    "rdfs:comment": "The indication of whether or not the start date of a control has been confirmed for this cross-border regulatory procedure."
+                },
+                {
+                    "@id": "cefact:Cross-Border_CustomsProcedure.ControlStartDateConfirmation.Indicator",
+                    "@type": "unece:BasicBIE",
+                    "unece:cefactUNId": "UN01003458",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_CustomsProcedure.Details",
+                    "rdfs:comment": "The indication of whether or not the start date of a customs control has been confirmed for this cross-border customs procedure."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:cross-BorderRegulatoryProcedurePaymentMethodCode",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "unece:UNECECL4439Code"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:RegulatoryProcedure"
+            },
+            "rdfs:comment": "The code specifying the payment method for this cross-border regulatory procedure, such as by deferred payment method.",
+            "rdfs:label": "cross-BorderRegulatoryProcedurePaymentMethodCode",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_RegulatoryProcedure.PaymentMethod.Code",
+                    "@type": "unece:BasicBIE",
+                    "unece:TDED": "4439",
+                    "unece:cefactUNId": "UN01006167",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_RegulatoryProcedure.Details",
+                    "rdfs:comment": "The code specifying the payment method for this cross-border regulatory procedure, such as by deferred payment method."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:cross-BorderRegulatoryProcedureTypeCode",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "unece:UNECECL9353Code"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:RegulatoryProcedure"
+            },
+            "rdfs:comment": "A code specifying a type of cross-border regulatory procedure.",
+            "rdfs:label": "cross-BorderRegulatoryProcedureTypeCode",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_RegulatoryProcedure.Type.Code",
+                    "@type": "unece:BasicBIE",
+                    "unece:TDED": "9353",
+                    "unece:cefactUNId": "UN01006148",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_RegulatoryProcedure.Details",
+                    "rdfs:comment": "A code specifying a type of cross-border regulatory procedure."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:currencyExchangeRate",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "xsd:decimal"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:Declaration"
+            },
+            "rdfs:comment": "The rate of currency exchange in this exchanged declaration.",
+            "rdfs:label": "currencyExchangeRate",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Exchanged_Declaration.CurrencyExchange.Rate",
+                    "@type": "unece:BasicBIE",
+                    "unece:cefactUNId": "UN01011018",
+                    "unece:cefactBieDomainClass": "cefact:Exchanged_Declaration.Details",
+                    "rdfs:comment": "The rate of currency exchange in this exchanged declaration."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:customsValueSpecifiedAmount",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "xsd:decimal"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:Declaration"
+            },
+            "rdfs:comment": "The monetary value specified for customs purposes in this exchanged declaration.",
+            "rdfs:label": "customsValueSpecifiedAmount",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Exchanged_Declaration.CustomsValue_Specified.Amount",
+                    "@type": "unece:BasicBIE",
+                    "unece:TDED": "5072",
+                    "unece:cefactUNId": "UN01011015",
+                    "unece:cefactBieDomainClass": "cefact:Exchanged_Declaration.Details",
+                    "rdfs:comment": "The monetary value specified for customs purposes in this exchanged declaration."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:declarantAgentParty",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "regulatory:Party"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:Declaration"
+            },
+            "rdfs:comment": "The trade party acting as an agent for the declarant for this exchanged declaration.",
+            "rdfs:label": "declarantAgentParty",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Exchanged_Declaration.DeclarantAgent.Trade_Party",
+                    "@type": "unece:AssociationBIE",
+                    "unece:cefactUNId": "UN01011021",
+                    "unece:cefactBieDomainClass": "cefact:Exchanged_Declaration.Details",
+                    "rdfs:comment": "The trade party acting as an agent for the declarant for this exchanged declaration."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:declarantAssignedDeclarationId",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "xsd:token"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:RegulatoryProcedure"
+            },
+            "rdfs:comment": "The declarant assigned identifier of a declaration for this cross-border regulatory procedure.",
+            "rdfs:label": "declarantAssignedDeclarationId",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_RegulatoryProcedure.DeclarantAssignedDeclaration.Identifier",
+                    "@type": "unece:BasicBIE",
+                    "unece:TDED": "1097",
+                    "unece:cefactUNId": "UN01006159",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_RegulatoryProcedure.Details",
+                    "rdfs:comment": "The declarant assigned identifier of a declaration for this cross-border regulatory procedure."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:declarantParty",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "regulatory:Party"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:Declaration"
+            },
+            "rdfs:comment": "The trade party acting as the declarant for this exchanged declaration.",
+            "rdfs:label": "declarantParty",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Exchanged_Declaration.Declarant.Trade_Party",
+                    "@type": "unece:AssociationBIE",
+                    "unece:cefactUNId": "UN01011020",
+                    "unece:cefactBieDomainClass": "cefact:Exchanged_Declaration.Details",
+                    "rdfs:comment": "The trade party acting as the declarant for this exchanged declaration."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:declarationLodgementLocation",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "regulatory:Location"
+            },
+            "schema:domainIncludes": [
+                {
+                    "@id": "regulatory:CustomsProcedure"
+                },
+                {
+                    "@id": "regulatory:RegulatoryProcedure"
+                }
+            ],
+            "rdfs:comment": [
+                "The location at which a declaration has been lodged for this cross-border regulatory procedure.",
+                "The location at which a declaration relevant to this cross-border customs procedure has been lodged."
+            ],
+            "rdfs:label": "declarationLodgementLocation",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_RegulatoryProcedure.DeclarationLodgement.Logistics_Location",
+                    "@type": "unece:AssociationBIE",
+                    "unece:cefactUNId": "UN01006178",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_RegulatoryProcedure.Details",
+                    "rdfs:comment": "The location at which a declaration has been lodged for this cross-border regulatory procedure."
+                },
+                {
+                    "@id": "cefact:Cross-Border_CustomsProcedure.DeclarationLodgement.Logistics_Location",
+                    "@type": "unece:AssociationBIE",
+                    "unece:cefactUNId": "UN01003474",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_CustomsProcedure.Details",
+                    "rdfs:comment": "The location at which a declaration relevant to this cross-border customs procedure has been lodged."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:deductedAdjustmentAmount",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "xsd:decimal"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:CustomsValuation"
+            },
+            "rdfs:comment": "The monetary value of the adjustment deducted for this cross-border customs valuation.",
+            "rdfs:label": "deductedAdjustmentAmount",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_CustomsValuation.Deducted_Adjustment.Amount",
+                    "@type": "unece:BasicBIE",
+                    "unece:TDED": "5514",
+                    "unece:cefactUNId": "UN01003485",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_CustomsValuation.Details",
+                    "rdfs:comment": "The monetary value of the adjustment deducted for this cross-border customs valuation."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:deductedAdjustmentPercent",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "xsd:decimal"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:CustomsValuation"
+            },
+            "rdfs:comment": "The adjustment deducted, expressed as a percentage, for this cross-border customs valuation.",
+            "rdfs:label": "deductedAdjustmentPercent",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_CustomsValuation.Deducted_Adjustment.Percent",
+                    "@type": "unece:BasicBIE",
+                    "unece:TDED": "5510",
+                    "unece:cefactUNId": "UN01003487",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_CustomsValuation.Details",
+                    "rdfs:comment": "The adjustment deducted, expressed as a percentage, for this cross-border customs valuation."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:deferredPayableTotalChargeAmount",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "xsd:decimal"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:RegulatoryProcedure"
+            },
+            "rdfs:comment": "A monetary value of the total charges, including tariff and non-tariff charges, deferred for this cross-border regulatory procedure.",
+            "rdfs:label": "deferredPayableTotalChargeAmount",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_RegulatoryProcedure.DeferredPayable_TotalCharge.Amount",
+                    "@type": "unece:BasicBIE",
+                    "unece:cefactUNId": "UN01008962",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_RegulatoryProcedure.Details",
+                    "rdfs:comment": "A monetary value of the total charges, including tariff and non-tariff charges, deferred for this cross-border regulatory procedure."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:deferredPaymentMethodIndicator",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "xsd:boolean"
+            },
+            "schema:domainIncludes": [
+                {
+                    "@id": "regulatory:CustomsProcedure"
+                },
+                {
+                    "@id": "regulatory:RegulatoryProcedure"
+                }
+            ],
+            "rdfs:comment": [
+                "The indication of whether or not the deferred payment method is applicable to this cross-border regulatory procedure.",
+                "The indication of whether or not the total payable for this cross-border customs procedure will be made by the deferred payment method."
+            ],
+            "rdfs:label": "deferredPaymentMethodIndicator",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_RegulatoryProcedure.DeferredPaymentMethod.Indicator",
+                    "@type": "unece:BasicBIE",
+                    "unece:cefactUNId": "UN01008963",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_RegulatoryProcedure.Details",
+                    "rdfs:comment": "The indication of whether or not the deferred payment method is applicable to this cross-border regulatory procedure."
+                },
+                {
+                    "@id": "cefact:Cross-Border_CustomsProcedure.DeferredPaymentMethod.Indicator",
+                    "@type": "unece:BasicBIE",
+                    "unece:cefactUNId": "UN01003460",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_CustomsProcedure.Details",
+                    "rdfs:comment": "The indication of whether or not the total payable for this cross-border customs procedure will be made by the deferred payment method."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:deferredTotalPayableAmount",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "xsd:decimal"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:CustomsProcedure"
+            },
+            "rdfs:comment": "The monetary value of the deferred total payable for this cross-border customs procedure including duty and other charges.",
+            "rdfs:label": "deferredTotalPayableAmount",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_CustomsProcedure.Deferred_TotalPayable.Amount",
+                    "@type": "unece:BasicBIE",
+                    "unece:cefactUNId": "UN01003449",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_CustomsProcedure.Details",
+                    "rdfs:comment": "The monetary value of the deferred total payable for this cross-border customs procedure including duty and other charges."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:description",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "xsd:string"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:Declaration"
+            },
+            "rdfs:comment": "A textual description of this specified declaration.",
+            "rdfs:label": "description",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Specified_Declaration.Description.Text",
+                    "@type": "unece:BasicBIE",
+                    "unece:cefactUNId": "UN01015060",
+                    "unece:cefactBieDomainClass": "cefact:Specified_Declaration.Details",
+                    "rdfs:comment": "A textual description of this specified declaration."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:documentTypeCode",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "unece:UNECECL1001Code"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:Declaration"
+            },
+            "rdfs:comment": "The code specifying the type of this exchanged declaration.",
+            "rdfs:label": "documentTypeCode",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Exchanged_Declaration.Type.Code",
+                    "@type": "unece:BasicBIE",
+                    "unece:TDED": "1001",
+                    "unece:cefactUNId": "UN01011013",
+                    "unece:cefactBieDomainClass": "cefact:Exchanged_Declaration.Details",
+                    "rdfs:comment": "The code specifying the type of this exchanged declaration."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:dutyPayableAmount",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "xsd:decimal"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:CustomsProcedure"
+            },
+            "rdfs:comment": "A monetary value of duty payable for this cross-border customs procedure.",
+            "rdfs:label": "dutyPayableAmount",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_CustomsProcedure.DutyPayable.Amount",
+                    "@type": "unece:BasicBIE",
+                    "unece:cefactUNId": "UN01003445",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_CustomsProcedure.Details",
+                    "rdfs:comment": "A monetary value of duty payable for this cross-border customs procedure."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:entryCustomsOfficeLocation",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "regulatory:Location"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:CustomsProcedure"
+            },
+            "rdfs:comment": "The location of the customs office at which the goods which are subject to this cross-border customs procedure, will enter the customs territory of entry.",
+            "rdfs:label": "entryCustomsOfficeLocation",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_CustomsProcedure.EntryCustomsOffice.Logistics_Location",
+                    "@type": "unece:AssociationBIE",
+                    "unece:cefactUNId": "UN01003470",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_CustomsProcedure.Details",
+                    "rdfs:comment": "The location of the customs office at which the goods which are subject to this cross-border customs procedure, will enter the customs territory of entry."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:entryCustomsOfficeSpecifiedLocation",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "regulatory:Location"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:RegulatoryProcedure"
+            },
+            "rdfs:comment": "The location of the specified customs office at which the goods subject to this cross-border regulatory procedure, enter the customs territory of entry.",
+            "rdfs:label": "entryCustomsOfficeSpecifiedLocation",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_RegulatoryProcedure.EntryCustomsOffice_Specified.Logistics_Location",
+                    "@type": "unece:AssociationBIE",
+                    "unece:cefactUNId": "UN01008972",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_RegulatoryProcedure.Details",
+                    "rdfs:comment": "The location of the specified customs office at which the goods subject to this cross-border regulatory procedure, enter the customs territory of entry."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:examinationEvent",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "regulatory:Event"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:RegulatoryProcedure"
+            },
+            "rdfs:comment": "An examination event for this cross-border regulatory procedure.",
+            "rdfs:label": "examinationEvent",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_RegulatoryProcedure.Examination.Transport_Event",
+                    "@type": "unece:AssociationBIE",
+                    "unece:cefactUNId": "UN01008969",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_RegulatoryProcedure.Details",
+                    "rdfs:comment": "An examination event for this cross-border regulatory procedure."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:exemptionClaimantParty",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "regulatory:Party"
+            },
+            "schema:domainIncludes": [
+                {
+                    "@id": "regulatory:CustomsProcedure"
+                },
+                {
+                    "@id": "regulatory:RegulatoryProcedure"
+                }
+            ],
+            "rdfs:comment": [
+                "A party who claims an exemption from this cross-border customs procedure.",
+                "A party who claims an exemption from this cross-border regulatory procedure."
+            ],
+            "rdfs:label": "exemptionClaimantParty",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_CustomsProcedure.ExemptionClaimant.Trade_Party",
+                    "@type": "unece:AssociationBIE",
+                    "unece:cefactUNId": "UN01003482",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_CustomsProcedure.Details",
+                    "rdfs:comment": "A party who claims an exemption from this cross-border customs procedure."
+                },
+                {
+                    "@id": "cefact:Cross-Border_RegulatoryProcedure.ExemptionClaimant.Trade_Party",
+                    "@type": "unece:AssociationBIE",
+                    "unece:cefactUNId": "UN01006183",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_RegulatoryProcedure.Details",
+                    "rdfs:comment": "A party who claims an exemption from this cross-border regulatory procedure."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:exitCustomsOfficeLocation",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "regulatory:Location"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:CustomsProcedure"
+            },
+            "rdfs:comment": "The location of the customs office at which the goods which are subject to this cross-border customs procedure leave or are intended to leave the customs territory of destination.",
+            "rdfs:label": "exitCustomsOfficeLocation",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_CustomsProcedure.ExitCustomsOffice.Logistics_Location",
+                    "@type": "unece:AssociationBIE",
+                    "unece:cefactUNId": "UN01003471",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_CustomsProcedure.Details",
+                    "rdfs:comment": "The location of the customs office at which the goods which are subject to this cross-border customs procedure leave or are intended to leave the customs territory of destination."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:exitCustomsOfficeSpecifiedLocation",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "regulatory:Location"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:RegulatoryProcedure"
+            },
+            "rdfs:comment": "The location of the specified customs office at which the goods which are subject to this cross-border regulatory procedure leave the customs territory of destination.",
+            "rdfs:label": "exitCustomsOfficeSpecifiedLocation",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_RegulatoryProcedure.ExitCustomsOffice_Specified.Logistics_Location",
+                    "@type": "unece:AssociationBIE",
+                    "unece:cefactUNId": "UN01008973",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_RegulatoryProcedure.Details",
+                    "rdfs:comment": "The location of the specified customs office at which the goods which are subject to this cross-border regulatory procedure leave the customs territory of destination."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:exportControlRequirementIndicator",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "xsd:boolean"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:CustomsProcedure"
+            },
+            "rdfs:comment": "The indication of whether or not an export control is required for this cross-border customs procedure.",
+            "rdfs:label": "exportControlRequirementIndicator",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_CustomsProcedure.Export_ControlRequirement.Indicator",
+                    "@type": "unece:BasicBIE",
+                    "unece:cefactUNId": "UN01003459",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_CustomsProcedure.Details",
+                    "rdfs:comment": "The indication of whether or not an export control is required for this cross-border customs procedure."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:exportCustomsOfficeLocation",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "regulatory:Location"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:CustomsProcedure"
+            },
+            "rdfs:comment": "The location of the customs office which is responsible for export formalities for the goods which are subject to this cross-border customs procedure.",
+            "rdfs:label": "exportCustomsOfficeLocation",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_CustomsProcedure.ExportCustomsOffice.Logistics_Location",
+                    "@type": "unece:AssociationBIE",
+                    "unece:cefactUNId": "UN01003477",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_CustomsProcedure.Details",
+                    "rdfs:comment": "The location of the customs office which is responsible for export formalities for the goods which are subject to this cross-border customs procedure."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:exportCustomsOfficeSpecifiedLocation",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "regulatory:Location"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:RegulatoryProcedure"
+            },
+            "rdfs:comment": "The location of the specified customs office which is responsible for export formalities for the goods which are subject to this cross-border regulatory procedure.",
+            "rdfs:label": "exportCustomsOfficeSpecifiedLocation",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_RegulatoryProcedure.ExportCustomsOffice_Specified.Logistics_Location",
+                    "@type": "unece:AssociationBIE",
+                    "unece:cefactUNId": "UN01008975",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_RegulatoryProcedure.Details",
+                    "rdfs:comment": "The location of the specified customs office which is responsible for export formalities for the goods which are subject to this cross-border regulatory procedure."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:exportLicenceControlClassificationId",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "xsd:token"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:RegulatoryProcedure"
+            },
+            "rdfs:comment": "The identifier of the export licence classification for control purposes relevant to this cross-border regulatory procedure, such as per the Wassenaar agreement concerning trade in weapons and dual-use goods and technologies.",
+            "rdfs:label": "exportLicenceControlClassificationId",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_RegulatoryProcedure.ExportLicenceControlClassification.Identifier",
+                    "@type": "unece:BasicBIE",
+                    "unece:TDED": "1095",
+                    "unece:cefactUNId": "UN01008966",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_RegulatoryProcedure.Details",
+                    "rdfs:comment": "The identifier of the export licence classification for control purposes relevant to this cross-border regulatory procedure, such as per the Wassenaar agreement concerning trade in weapons and dual-use goods and technologies."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:exportLicenseControlClassificationId",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "xsd:token"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:CustomsProcedure"
+            },
+            "rdfs:comment": "The unique identifier of the export licence classification for control purposes relevant to this cross-border customs procedure, such as per the Wassenaar agreement concerning trade in weapons and dual-use goods and technologies.",
+            "rdfs:label": "exportLicenseControlClassificationId",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_CustomsProcedure.ExportLicenseControlClassification.Identifier",
+                    "@type": "unece:BasicBIE",
+                    "unece:cefactUNId": "UN01003456",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_CustomsProcedure.Details",
+                    "rdfs:comment": "The unique identifier of the export licence classification for control purposes relevant to this cross-border customs procedure, such as per the Wassenaar agreement concerning trade in weapons and dual-use goods and technologies."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:freeTradeAgreementName",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "xsd:string"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:RegulatoryProcedure"
+            },
+            "rdfs:comment": "The name of a free trade agreement, expressed as text, for this cross-border regulatory procedure.",
+            "rdfs:label": "freeTradeAgreementName",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_RegulatoryProcedure.FreeTradeAgreementName.Text",
+                    "@type": "unece:BasicBIE",
+                    "unece:cefactUNId": "UN01013705",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_RegulatoryProcedure.Details",
+                    "rdfs:comment": "The name of a free trade agreement, expressed as text, for this cross-border regulatory procedure."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:goodsStatusCode",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "xsd:token"
+            },
+            "schema:domainIncludes": [
+                {
+                    "@id": "regulatory:CustomsProcedure"
+                },
+                {
+                    "@id": "regulatory:RegulatoryProcedure"
+                }
+            ],
+            "rdfs:comment": [
+                "The code specifying the goods status for this cross-border customs procedure.",
+                "The code specifying the goods status for this cross-border regulatory procedure."
+            ],
+            "rdfs:label": "goodsStatusCode",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_CustomsProcedure.GoodsStatus.Code",
+                    "@type": "unece:BasicBIE",
+                    "unece:cefactUNId": "UN01003436",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_CustomsProcedure.Details",
+                    "rdfs:comment": "The code specifying the goods status for this cross-border customs procedure."
+                },
+                {
+                    "@id": "cefact:Cross-Border_RegulatoryProcedure.GoodsStatus.Code",
+                    "@type": "unece:BasicBIE",
+                    "unece:TDED": "4095",
+                    "unece:cefactUNId": "UN01008965",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_RegulatoryProcedure.Details",
+                    "rdfs:comment": "The code specifying the goods status for this cross-border regulatory procedure."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:governmentActionResponsibleAgencyActionCode",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "unece:UNECECL9417Code"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:RegulatoryProcedure"
+            },
+            "rdfs:comment": "A code specifying an action for a responsible agency in this cross-border regulatory procedure.",
+            "rdfs:label": "governmentActionResponsibleAgencyActionCode",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_RegulatoryProcedure.ResponsibleAgencyAction.Code",
+                    "@type": "unece:BasicBIE",
+                    "unece:TDED": "9417",
+                    "unece:cefactUNId": "UN01008960",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_RegulatoryProcedure.Details",
+                    "rdfs:comment": "A code specifying an action for a responsible agency in this cross-border regulatory procedure."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:grossWeightSpecifiedMeasure",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "xsd:decimal"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:Declaration"
+            },
+            "rdfs:comment": "The gross weight measure specified in this exchanged declaration.",
+            "rdfs:label": "grossWeightSpecifiedMeasure",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Exchanged_Declaration.GrossWeight_Specified.Measure",
+                    "@type": "unece:BasicBIE",
+                    "unece:TDED": "6411",
+                    "unece:cefactUNId": "UN01011009",
+                    "unece:cefactBieDomainClass": "cefact:Exchanged_Declaration.Details",
+                    "rdfs:comment": "The gross weight measure specified in this exchanged declaration."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:guarantee",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "xsd:string"
+            },
+            "schema:domainIncludes": [
+                {
+                    "@id": "regulatory:CustomsProcedure"
+                },
+                {
+                    "@id": "regulatory:RegulatoryProcedure"
+                }
+            ],
+            "rdfs:comment": [
+                "The undertaking, expressed as text, given in cash, bond or as a written guarantee to ensure that an obligation will be fulfilled for this cross-border regulatory procedure.",
+                "The undertaking, expressed as text, given in cash, bond or as a written guarantee to ensure that an obligation will be fulfilled in relation to a cross-border customs procedure, such as under a transit procedure."
+            ],
+            "rdfs:label": "guarantee",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_RegulatoryProcedure.Guarantee.Text",
+                    "@type": "unece:BasicBIE",
+                    "unece:TDED": "4376",
+                    "unece:cefactUNId": "UN01006152",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_RegulatoryProcedure.Details",
+                    "rdfs:comment": "The undertaking, expressed as text, given in cash, bond or as a written guarantee to ensure that an obligation will be fulfilled for this cross-border regulatory procedure."
+                },
+                {
+                    "@id": "cefact:Cross-Border_CustomsProcedure.Guarantee.Text",
+                    "@type": "unece:BasicBIE",
+                    "unece:cefactUNId": "UN01003439",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_CustomsProcedure.Details",
+                    "rdfs:comment": "The undertaking, expressed as text, given in cash, bond or as a written guarantee to ensure that an obligation will be fulfilled in relation to a cross-border customs procedure, such as under a transit procedure."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:guaranteeCode",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "xsd:token"
+            },
+            "schema:domainIncludes": [
+                {
+                    "@id": "regulatory:CustomsProcedure"
+                },
+                {
+                    "@id": "regulatory:RegulatoryProcedure"
+                }
+            ],
+            "rdfs:comment": [
+                "The code specifying an undertaking given in cash, bond or as a written guarantee to ensure that an obligation will be fulfilled for this cross-border regulatory procedure.",
+                "The code specifying the undertaking given in cash, bond or as a written guarantee to ensure that an obligation will be fulfilled in relation to a cross-border customs procedure, such as under a transit procedure."
+            ],
+            "rdfs:label": "guaranteeCode",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_RegulatoryProcedure.Guarantee.Code",
+                    "@type": "unece:BasicBIE",
+                    "unece:TDED": "4377",
+                    "unece:cefactUNId": "UN01006151",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_RegulatoryProcedure.Details",
+                    "rdfs:comment": "The code specifying an undertaking given in cash, bond or as a written guarantee to ensure that an obligation will be fulfilled for this cross-border regulatory procedure."
+                },
+                {
+                    "@id": "cefact:Cross-Border_CustomsProcedure.Guarantee.Code",
+                    "@type": "unece:BasicBIE",
+                    "unece:cefactUNId": "UN01003438",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_CustomsProcedure.Details",
+                    "rdfs:comment": "The code specifying the undertaking given in cash, bond or as a written guarantee to ensure that an obligation will be fulfilled in relation to a cross-border customs procedure, such as under a transit procedure."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:id",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "xsd:token"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:Declaration"
+            },
+            "rdfs:comment": [
+                "An identifier for this exchanged declaration.",
+                "An identifier for this specified declaration."
+            ],
+            "rdfs:label": "id",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Specified_Declaration.Identification.Identifier",
+                    "@type": "unece:BasicBIE",
+                    "unece:TDED": "1426",
+                    "unece:cefactUNId": "UN01015057",
+                    "unece:cefactBieDomainClass": "cefact:Specified_Declaration.Details",
+                    "rdfs:comment": "An identifier for this specified declaration."
+                },
+                {
+                    "@id": "cefact:Exchanged_Declaration.Identification.Identifier",
+                    "@type": "unece:BasicBIE",
+                    "unece:TDED": "1426",
+                    "unece:cefactUNId": "UN01011007",
+                    "unece:cefactBieDomainClass": "cefact:Exchanged_Declaration.Details",
+                    "rdfs:comment": "An identifier for this exchanged declaration."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:immediatePayableTotalChargeAmount",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "xsd:decimal"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:RegulatoryProcedure"
+            },
+            "rdfs:comment": "A monetary value of the total charges, including tariff and non-tariff charges, immediately payable for this cross-border regulatory procedure.",
+            "rdfs:label": "immediatePayableTotalChargeAmount",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_RegulatoryProcedure.ImmediatePayable_TotalCharge.Amount",
+                    "@type": "unece:BasicBIE",
+                    "unece:cefactUNId": "UN01008961",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_RegulatoryProcedure.Details",
+                    "rdfs:comment": "A monetary value of the total charges, including tariff and non-tariff charges, immediately payable for this cross-border regulatory procedure."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:immediateTotalPayableAmount",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "xsd:decimal"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:CustomsProcedure"
+            },
+            "rdfs:comment": "The monetary value of the immediate total payable for this cross-border customs procedure including duty and other charges.",
+            "rdfs:label": "immediateTotalPayableAmount",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_CustomsProcedure.Immediate_TotalPayable.Amount",
+                    "@type": "unece:BasicBIE",
+                    "unece:cefactUNId": "UN01003448",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_CustomsProcedure.Details",
+                    "rdfs:comment": "The monetary value of the immediate total payable for this cross-border customs procedure including duty and other charges."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:importCustomsOfficeLocation",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "regulatory:Location"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:CustomsProcedure"
+            },
+            "rdfs:comment": "The location of the customs office which is responsible for import formalities for the goods which are subject to this cross-border customs procedure.",
+            "rdfs:label": "importCustomsOfficeLocation",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_CustomsProcedure.ImportCustomsOffice.Logistics_Location",
+                    "@type": "unece:AssociationBIE",
+                    "unece:cefactUNId": "UN01003478",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_CustomsProcedure.Details",
+                    "rdfs:comment": "The location of the customs office which is responsible for import formalities for the goods which are subject to this cross-border customs procedure."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:importCustomsOfficeSpecifiedLocation",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "regulatory:Location"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:RegulatoryProcedure"
+            },
+            "rdfs:comment": "The location of the specified customs office which is responsible for import formalities for the goods which are subject to this cross-border regulatory procedure.",
+            "rdfs:label": "importCustomsOfficeSpecifiedLocation",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_RegulatoryProcedure.ImportCustomsOffice_Specified.Logistics_Location",
+                    "@type": "unece:AssociationBIE",
+                    "unece:cefactUNId": "UN01008974",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_RegulatoryProcedure.Details",
+                    "rdfs:comment": "The location of the specified customs office which is responsible for import formalities for the goods which are subject to this cross-border regulatory procedure."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:information",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "xsd:string"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:CustomsProcedure"
+            },
+            "rdfs:comment": "Information, expressed as text, for this cross-border customs procedure.",
+            "rdfs:label": "information",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_CustomsProcedure.Information.Text",
+                    "@type": "unece:BasicBIE",
+                    "unece:cefactUNId": "UN01003462",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_CustomsProcedure.Details",
+                    "rdfs:comment": "Information, expressed as text, for this cross-border customs procedure."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:issueDateTime",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "xsd:dateTime"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:Declaration"
+            },
+            "rdfs:comment": [
+                "The date, time, date time or other date time value for the issuance of this exchanged declaration.",
+                "The issue date, time, date time or other date time value for this specified declaration."
+            ],
+            "rdfs:label": "issueDateTime",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Exchanged_Declaration.Issue.DateTime",
+                    "@type": "unece:BasicBIE",
+                    "unece:TDED": "2007",
+                    "unece:cefactUNId": "UN01011008",
+                    "unece:cefactBieDomainClass": "cefact:Exchanged_Declaration.Details",
+                    "rdfs:comment": "The date, time, date time or other date time value for the issuance of this exchanged declaration."
+                },
+                {
+                    "@id": "cefact:Specified_Declaration.Issue.DateTime",
+                    "@type": "unece:BasicBIE",
+                    "unece:cefactUNId": "UN01015062",
+                    "unece:cefactBieDomainClass": "cefact:Specified_Declaration.Details",
+                    "rdfs:comment": "The issue date, time, date time or other date time value for this specified declaration."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:issuerParty",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "regulatory:Party"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:Declaration"
+            },
+            "rdfs:comment": "A party that issues this specified declaration.",
+            "rdfs:label": "issuerParty",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Specified_Declaration.Issuer.Trade_Party",
+                    "@type": "unece:AssociationBIE",
+                    "unece:cefactUNId": "UN01015065",
+                    "unece:cefactBieDomainClass": "cefact:Specified_Declaration.Details",
+                    "rdfs:comment": "A party that issues this specified declaration."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:jurisdictionEntryDateTime",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "xsd:dateTime"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:Declaration"
+            },
+            "rdfs:comment": "The date, time, date time or other date time value when the items which are a subject of this exchanged declaration enter a jurisdiction, such as the actual date of arrival of a means of transport.",
+            "rdfs:label": "jurisdictionEntryDateTime",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Exchanged_Declaration.JurisdictionEntry.DateTime",
+                    "@type": "unece:BasicBIE",
+                    "unece:TDED": "2379",
+                    "unece:cefactUNId": "UN01011011",
+                    "unece:cefactBieDomainClass": "cefact:Exchanged_Declaration.Details",
+                    "rdfs:comment": "The date, time, date time or other date time value when the items which are a subject of this exchanged declaration enter a jurisdiction, such as the actual date of arrival of a means of transport."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:methodCode",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "xsd:token"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:CustomsValuation"
+            },
+            "rdfs:comment": "The code specifying the method by which this cross-border customs valuation is determined.",
+            "rdfs:label": "methodCode",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_CustomsValuation.Method.Code",
+                    "@type": "unece:BasicBIE",
+                    "unece:TDED": "5509",
+                    "unece:cefactUNId": "UN01003488",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_CustomsValuation.Details",
+                    "rdfs:comment": "The code specifying the method by which this cross-border customs valuation is determined."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:name",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "xsd:string"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:Declaration"
+            },
+            "rdfs:comment": "A name, expressed as text, for this specified declaration.",
+            "rdfs:label": "name",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Specified_Declaration.Name.Text",
+                    "@type": "unece:BasicBIE",
+                    "unece:cefactUNId": "UN01015059",
+                    "unece:cefactBieDomainClass": "cefact:Specified_Declaration.Details",
+                    "rdfs:comment": "A name, expressed as text, for this specified declaration."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:nonTariffChargeAmount",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "xsd:decimal"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:RegulatoryProcedure"
+            },
+            "rdfs:comment": "A monetary value of all non-tariff charges for this cross-border regulatory procedure.",
+            "rdfs:label": "nonTariffChargeAmount",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_RegulatoryProcedure.Non-TariffCharge.Amount",
+                    "@type": "unece:BasicBIE",
+                    "unece:cefactUNId": "UN01006163",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_RegulatoryProcedure.Details",
+                    "rdfs:comment": "A monetary value of all non-tariff charges for this cross-border regulatory procedure."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:originCriteria",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "xsd:string"
+            },
+            "schema:domainIncludes": [
+                {
+                    "@id": "regulatory:CustomsProcedure"
+                },
+                {
+                    "@id": "regulatory:RegulatoryProcedure"
+                }
+            ],
+            "rdfs:comment": [
+                "The origin criteria, expressed as text, for this cross-border customs procedure.",
+                "The origin criteria, expressed as text, for this cross-border regulatory procedure."
+            ],
+            "rdfs:label": "originCriteria",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_CustomsProcedure.OriginCriteria.Text",
+                    "@type": "unece:BasicBIE",
+                    "unece:cefactUNId": "UN01003464",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_CustomsProcedure.Details",
+                    "rdfs:comment": "The origin criteria, expressed as text, for this cross-border customs procedure."
+                },
+                {
+                    "@id": "cefact:Cross-Border_RegulatoryProcedure.OriginCriteria.Text",
+                    "@type": "unece:BasicBIE",
+                    "unece:cefactUNId": "UN01006169",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_RegulatoryProcedure.Details",
+                    "rdfs:comment": "The origin criteria, expressed as text, for this cross-border regulatory procedure."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:otherChargeAmount",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "xsd:decimal"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:CustomsValuation"
+            },
+            "rdfs:comment": "A monetary value added or subtracted from the total invoice price not previously taken into account for this cross-border customs valuation.",
+            "rdfs:label": "otherChargeAmount",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_CustomsValuation.OtherCharge.Amount",
+                    "@type": "unece:BasicBIE",
+                    "unece:cefactUNId": "UN01003491",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_CustomsValuation.Details",
+                    "rdfs:comment": "A monetary value added or subtracted from the total invoice price not previously taken into account for this cross-border customs valuation."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:otherChargesPayableAmount",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "xsd:decimal"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:CustomsProcedure"
+            },
+            "rdfs:comment": "The monetary value of all other charges payable for this cross-border customs procedure.",
+            "rdfs:label": "otherChargesPayableAmount",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_CustomsProcedure.OtherChargesPayable.Amount",
+                    "@type": "unece:BasicBIE",
+                    "unece:cefactUNId": "UN01003446",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_CustomsProcedure.Details",
+                    "rdfs:comment": "The monetary value of all other charges payable for this cross-border customs procedure."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:payerSpecifiedFinancialAccount",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "regulatory:FinancialAccount"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:CustomsProcedure"
+            },
+            "rdfs:comment": "A debtor financial account specified for the payer of the trade transaction for this cross-border customs procedure.",
+            "rdfs:label": "payerSpecifiedFinancialAccount",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_CustomsProcedure.Payer_Specified.Debtor_FinancialAccount",
+                    "@type": "unece:AssociationBIE",
+                    "unece:cefactUNId": "UN01003480",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_CustomsProcedure.Details",
+                    "rdfs:comment": "A debtor financial account specified for the payer of the trade transaction for this cross-border customs procedure."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:paymentOfficeLocation",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "regulatory:Location"
+            },
+            "schema:domainIncludes": [
+                {
+                    "@id": "regulatory:CustomsProcedure"
+                },
+                {
+                    "@id": "regulatory:RegulatoryProcedure"
+                }
+            ],
+            "rdfs:comment": [
+                "The location of an office at which a payment relevant to this cross-border regulatory procedure is made.",
+                "The location of the customs office at which a payment relevant to this cross-border customs procedure is to be or has been made."
+            ],
+            "rdfs:label": "paymentOfficeLocation",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_CustomsProcedure.PaymentOffice.Logistics_Location",
+                    "@type": "unece:AssociationBIE",
+                    "unece:cefactUNId": "UN01003475",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_CustomsProcedure.Details",
+                    "rdfs:comment": "The location of the customs office at which a payment relevant to this cross-border customs procedure is to be or has been made."
+                },
+                {
+                    "@id": "cefact:Cross-Border_RegulatoryProcedure.PaymentOffice.Logistics_Location",
+                    "@type": "unece:AssociationBIE",
+                    "unece:cefactUNId": "UN01006179",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_RegulatoryProcedure.Details",
+                    "rdfs:comment": "The location of an office at which a payment relevant to this cross-border regulatory procedure is made."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:performanceDateTime",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "xsd:dateTime"
+            },
+            "schema:domainIncludes": [
+                {
+                    "@id": "regulatory:CustomsProcedure"
+                },
+                {
+                    "@id": "regulatory:RegulatoryProcedure"
+                }
+            ],
+            "rdfs:comment": [
+                "A date, time, date time, or other date time value on which this cross-border regulatory procedure was, or will be, performed.",
+                "The date, time, date time, or other date time value on which this cross-border customs procedure was, or will be, performed."
+            ],
+            "rdfs:label": "performanceDateTime",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_RegulatoryProcedure.Performance.DateTime",
+                    "@type": "unece:BasicBIE",
+                    "unece:TDED": "2049",
+                    "unece:cefactUNId": "UN01006158",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_RegulatoryProcedure.Details",
+                    "rdfs:comment": "A date, time, date time, or other date time value on which this cross-border regulatory procedure was, or will be, performed."
+                },
+                {
+                    "@id": "cefact:Cross-Border_CustomsProcedure.Performance.DateTime",
+                    "@type": "unece:BasicBIE",
+                    "unece:cefactUNId": "UN01003455",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_CustomsProcedure.Details",
+                    "rdfs:comment": "The date, time, date time, or other date time value on which this cross-border customs procedure was, or will be, performed."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:previousDocument",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "regulatory:Document"
+            },
+            "schema:domainIncludes": [
+                {
+                    "@id": "regulatory:CustomsProcedure"
+                },
+                {
+                    "@id": "regulatory:Declaration"
+                },
+                {
+                    "@id": "regulatory:RegulatoryProcedure"
+                }
+            ],
+            "rdfs:comment": [
+                "A previous document referenced for this exchanged declaration.",
+                "A previous document related to this cross-border regulatory procedure.",
+                "A referenced document used for a cross-border declaration previously presented on customs territory for this cross-border customs procedure."
+            ],
+            "rdfs:label": "previousDocument",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_CustomsProcedure.Previous.Referenced_Document",
+                    "@type": "unece:AssociationBIE",
+                    "unece:cefactUNId": "UN01003467",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_CustomsProcedure.Details",
+                    "rdfs:comment": "A referenced document used for a cross-border declaration previously presented on customs territory for this cross-border customs procedure."
+                },
+                {
+                    "@id": "cefact:Cross-Border_RegulatoryProcedure.Previous.Referenced_Document",
+                    "@type": "unece:AssociationBIE",
+                    "unece:cefactUNId": "UN01006175",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_RegulatoryProcedure.Details",
+                    "rdfs:comment": "A previous document related to this cross-border regulatory procedure."
+                },
+                {
+                    "@id": "cefact:Exchanged_Declaration.Previous.Referenced_Document",
+                    "@type": "unece:AssociationBIE",
+                    "unece:cefactUNId": "UN01011024",
+                    "unece:cefactBieDomainClass": "cefact:Exchanged_Declaration.Details",
+                    "rdfs:comment": "A previous document referenced for this exchanged declaration."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:previousProcedureCode",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "xsd:token"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:CustomsProcedure"
+            },
+            "rdfs:comment": "The code specifying the customs procedure which has been completed prior to this cross-border customs procedure.",
+            "rdfs:label": "previousProcedureCode",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_CustomsProcedure.PreviousProcedure.Code",
+                    "@type": "unece:BasicBIE",
+                    "unece:cefactUNId": "UN01003435",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_CustomsProcedure.Details",
+                    "rdfs:comment": "The code specifying the customs procedure which has been completed prior to this cross-border customs procedure."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:previousProcedureTypeCode",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "xsd:token"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:RegulatoryProcedure"
+            },
+            "rdfs:comment": "A code specifying a type of previous procedure for this cross-border regulatory procedure.",
+            "rdfs:label": "previousProcedureTypeCode",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_RegulatoryProcedure.PreviousProcedureType.Code",
+                    "@type": "unece:BasicBIE",
+                    "unece:TDED": "9033",
+                    "unece:cefactUNId": "UN01006149",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_RegulatoryProcedure.Details",
+                    "rdfs:comment": "A code specifying a type of previous procedure for this cross-border regulatory procedure."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:principalAssociatedParty",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "regulatory:Party"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:Declaration"
+            },
+            "rdfs:comment": "A principal trade party associated with this exchanged declaration.",
+            "rdfs:label": "principalAssociatedParty",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Exchanged_Declaration.Principal_Associated.Trade_Party",
+                    "@type": "unece:AssociationBIE",
+                    "unece:cefactUNId": "UN01011025",
+                    "unece:cefactBieDomainClass": "cefact:Exchanged_Declaration.Details",
+                    "rdfs:comment": "A principal trade party associated with this exchanged declaration."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:procedureCode",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "xsd:token"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:Declaration"
+            },
+            "rdfs:comment": "A code specifying a procedure for this exchanged declaration.",
+            "rdfs:label": "procedureCode",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Exchanged_Declaration.Procedure.Code",
+                    "@type": "unece:BasicBIE",
+                    "unece:cefactUNId": "UN01011014",
+                    "unece:cefactBieDomainClass": "cefact:Exchanged_Declaration.Details",
+                    "rdfs:comment": "A code specifying a procedure for this exchanged declaration."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:quotaId",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "xsd:token"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:RegulatoryProcedure"
+            },
+            "rdfs:comment": "A quota identifier for this cross-border regulatory procedure.",
+            "rdfs:label": "quotaId",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_RegulatoryProcedure.Quota.Identifier",
+                    "@type": "unece:BasicBIE",
+                    "unece:cefactUNId": "UN01006166",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_RegulatoryProcedure.Details",
+                    "rdfs:comment": "A quota identifier for this cross-border regulatory procedure."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:referencedDocument",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "regulatory:Document"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:RegulatoryProcedure"
+            },
+            "rdfs:comment": "A document referenced by this cross-border regulatory procedure.",
+            "rdfs:label": "referencedDocument",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_RegulatoryProcedure.Referenced.Referenced_Document",
+                    "@type": "unece:AssociationBIE",
+                    "unece:cefactUNId": "UN01006176",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_RegulatoryProcedure.Details",
+                    "rdfs:comment": "A document referenced by this cross-border regulatory procedure."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:registeredDeferredPaymentPayerId",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "xsd:token"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:RegulatoryProcedure"
+            },
+            "rdfs:comment": "The identifier of the registered deferred payment payer for this cross-border regulatory procedure.",
+            "rdfs:label": "registeredDeferredPaymentPayerId",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_RegulatoryProcedure.RegisteredDeferredPaymentPayer.Identifier",
+                    "@type": "unece:BasicBIE",
+                    "unece:cefactUNId": "UN01008964",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_RegulatoryProcedure.Details",
+                    "rdfs:comment": "The identifier of the registered deferred payment payer for this cross-border regulatory procedure."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:remark",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "xsd:string"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:RegulatoryProcedure"
+            },
+            "rdfs:comment": "A remark, expressed as text, for this cross-border regulatory procedure.",
+            "rdfs:label": "remark",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_RegulatoryProcedure.Remark.Text",
+                    "@type": "unece:BasicBIE",
+                    "unece:cefactUNId": "UN01006165",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_RegulatoryProcedure.Details",
+                    "rdfs:comment": "A remark, expressed as text, for this cross-border regulatory procedure."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:reportedStatus",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "regulatory:Status"
+            },
+            "schema:domainIncludes": [
+                {
+                    "@id": "regulatory:CustomsProcedure"
+                },
+                {
+                    "@id": "regulatory:RegulatoryProcedure"
+                }
+            ],
+            "rdfs:comment": [
+                "A logistics status reported for this cross-border regulatory procedure.",
+                "An error status reported for this cross-border customs procedure."
+            ],
+            "rdfs:label": "reportedStatus",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_CustomsProcedure.Reported.Error_Status",
+                    "@type": "unece:AssociationBIE",
+                    "unece:cefactUNId": "UN01003481",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_CustomsProcedure.Details",
+                    "rdfs:comment": "An error status reported for this cross-border customs procedure."
+                },
+                {
+                    "@id": "cefact:Cross-Border_RegulatoryProcedure.Reported.Logistics_Status",
+                    "@type": "unece:AssociationBIE",
+                    "unece:cefactUNId": "UN01006182",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_RegulatoryProcedure.Details",
+                    "rdfs:comment": "A logistics status reported for this cross-border regulatory procedure."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:requestOverrideCode",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "xsd:token"
+            },
+            "schema:domainIncludes": [
+                {
+                    "@id": "regulatory:CustomsProcedure"
+                },
+                {
+                    "@id": "regulatory:RegulatoryProcedure"
+                }
+            ],
+            "rdfs:comment": [
+                "A code specifying a request, including a reason, to override previously submitted information for this cross-border regulatory procedure, such as due to an error condition.",
+                "The code specifying the request, including a reason, to override previously submitted information, such as due to an error condition for this cross-border customs procedure."
+            ],
+            "rdfs:label": "requestOverrideCode",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_CustomsProcedure.RequestOverride.Code",
+                    "@type": "unece:BasicBIE",
+                    "unece:cefactUNId": "UN01003437",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_CustomsProcedure.Details",
+                    "rdfs:comment": "The code specifying the request, including a reason, to override previously submitted information, such as due to an error condition for this cross-border customs procedure."
+                },
+                {
+                    "@id": "cefact:Cross-Border_RegulatoryProcedure.RequestOverride.Code",
+                    "@type": "unece:BasicBIE",
+                    "unece:TDED": "4097",
+                    "unece:cefactUNId": "UN01006150",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_RegulatoryProcedure.Details",
+                    "rdfs:comment": "A code specifying a request, including a reason, to override previously submitted information for this cross-border regulatory procedure, such as due to an error condition."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:requiredChemicalTreatment",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "regulatory:ChemicalTreatment"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:RegulatoryProcedure"
+            },
+            "rdfs:comment": "A chemical treatment applied as required by this cross-border regulatory procedure.",
+            "rdfs:label": "requiredChemicalTreatment",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_RegulatoryProcedure.Required.Applied_ChemicalTreatment",
+                    "@type": "unece:AssociationBIE",
+                    "unece:cefactUNId": "UN01009039",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_RegulatoryProcedure.Details",
+                    "rdfs:comment": "A chemical treatment applied as required by this cross-border regulatory procedure."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:requiredSeal",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "regulatory:Seal"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:RegulatoryProcedure"
+            },
+            "rdfs:comment": "A seal required by this cross-border regulatory procedure.",
+            "rdfs:label": "requiredSeal",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_RegulatoryProcedure.Required.Logistics_Seal",
+                    "@type": "unece:AssociationBIE",
+                    "unece:cefactUNId": "UN01008970",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_RegulatoryProcedure.Details",
+                    "rdfs:comment": "A seal required by this cross-border regulatory procedure."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:requiredTestSpecificationReport",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "regulatory:TestSpecificationReport"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:RegulatoryProcedure"
+            },
+            "rdfs:comment": "A report of a certification test and its attributes that is required for this cross-border regulatory procedure.",
+            "rdfs:label": "requiredTestSpecificationReport",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_RegulatoryProcedure.Required.Certification_TestSpecificationReport",
+                    "@type": "unece:AssociationBIE",
+                    "unece:cefactUNId": "UN01009040",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_RegulatoryProcedure.Details",
+                    "rdfs:comment": "A report of a certification test and its attributes that is required for this cross-border regulatory procedure."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:responsibleGovernmentAgencyInvolvementResponsibleAgencyInvolvementCode",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "unece:UNECECL9411Code"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:RegulatoryProcedure"
+            },
+            "rdfs:comment": "A code specifying a responsible agency involved in this cross-border regulatory procedure.",
+            "rdfs:label": "responsibleGovernmentAgencyInvolvementResponsibleAgencyInvolvementCode",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_RegulatoryProcedure.ResponsibleAgencyInvolvement.Code",
+                    "@type": "unece:BasicBIE",
+                    "unece:TDED": "9411",
+                    "unece:cefactUNId": "UN01008959",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_RegulatoryProcedure.Details",
+                    "rdfs:comment": "A code specifying a responsible agency involved in this cross-border regulatory procedure."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:responsibleGovernmentAgencyResponsibleAgencyCode",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "unece:UNECECL9415Code"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:RegulatoryProcedure"
+            },
+            "rdfs:comment": "The code specifying the agency responsible for this cross-border regulatory procedure.",
+            "rdfs:label": "responsibleGovernmentAgencyResponsibleAgencyCode",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_RegulatoryProcedure.ResponsibleAgency.Code",
+                    "@type": "unece:BasicBIE",
+                    "unece:TDED": "9415",
+                    "unece:cefactUNId": "UN01008958",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_RegulatoryProcedure.Details",
+                    "rdfs:comment": "The code specifying the agency responsible for this cross-border regulatory procedure."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:royaltyLicenseFeeIndicator",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "xsd:boolean"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:CustomsValuation"
+            },
+            "rdfs:comment": "The indication of whether or not there is a royalty or licence fee related to the goods for this cross-border customs valuation.",
+            "rdfs:label": "royaltyLicenseFeeIndicator",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_CustomsValuation.RoyaltyLicenseFee.Indicator",
+                    "@type": "unece:BasicBIE",
+                    "unece:cefactUNId": "UN01003496",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_CustomsValuation.Details",
+                    "rdfs:comment": "The indication of whether or not there is a royalty or licence fee related to the goods for this cross-border customs valuation."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:salePriceConditionIndicator",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "xsd:boolean"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:CustomsValuation"
+            },
+            "rdfs:comment": "The indication of whether or not there is a condition imposed on the sale price of the goods for this cross-border customs valuation.",
+            "rdfs:label": "salePriceConditionIndicator",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_CustomsValuation.SalePriceCondition.Indicator",
+                    "@type": "unece:BasicBIE",
+                    "unece:cefactUNId": "UN01003495",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_CustomsValuation.Details",
+                    "rdfs:comment": "The indication of whether or not there is a condition imposed on the sale price of the goods for this cross-border customs valuation."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:saleRestrictionIndicator",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "xsd:boolean"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:CustomsValuation"
+            },
+            "rdfs:comment": "The indication of whether or not there is any restriction imposed on the sale of the goods for this cross-border customs valuation.",
+            "rdfs:label": "saleRestrictionIndicator",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_CustomsValuation.SaleRestriction.Indicator",
+                    "@type": "unece:BasicBIE",
+                    "unece:cefactUNId": "UN01003494",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_CustomsValuation.Details",
+                    "rdfs:comment": "The indication of whether or not there is any restriction imposed on the sale of the goods for this cross-border customs valuation."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:specificCircumstanceCode",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "xsd:token"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:Declaration"
+            },
+            "rdfs:comment": "The code specifying a specific circumstance in this exchanged declaration.",
+            "rdfs:label": "specificCircumstanceCode",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Exchanged_Declaration.SpecificCircumstance.Code",
+                    "@type": "unece:BasicBIE",
+                    "unece:cefactUNId": "UN01011019",
+                    "unece:cefactBieDomainClass": "cefact:Exchanged_Declaration.Details",
+                    "rdfs:comment": "The code specifying a specific circumstance in this exchanged declaration."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:specifiedCustomsProcedure",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "regulatory:CustomsProcedure"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:RegulatoryProcedure"
+            },
+            "rdfs:comment": "A customs procedure specified for this cross-border regulatory procedure.",
+            "rdfs:label": "specifiedCustomsProcedure",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_RegulatoryProcedure.Specified.Cross-Border_CustomsProcedure",
+                    "@type": "unece:AssociationBIE",
+                    "unece:cefactUNId": "UN01006186",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_RegulatoryProcedure.Details",
+                    "rdfs:comment": "A customs procedure specified for this cross-border regulatory procedure."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:specifiedFinancialAccount",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "regulatory:FinancialAccount"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:RegulatoryProcedure"
+            },
+            "rdfs:comment": "A debtor financial account specified for this cross-border regulatory procedure.",
+            "rdfs:label": "specifiedFinancialAccount",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_RegulatoryProcedure.Specified.Debtor_FinancialAccount",
+                    "@type": "unece:AssociationBIE",
+                    "unece:cefactUNId": "UN01006181",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_RegulatoryProcedure.Details",
+                    "rdfs:comment": "A debtor financial account specified for this cross-border regulatory procedure."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:statementNote",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "regulatory:Note"
+            },
+            "schema:domainIncludes": [
+                {
+                    "@id": "regulatory:CustomsProcedure"
+                },
+                {
+                    "@id": "regulatory:RegulatoryProcedure"
+                }
+            ],
+            "rdfs:comment": [
+                "A statement note for this cross-border customs procedure.",
+                "A statement note for this cross-border regulatory procedure."
+            ],
+            "rdfs:label": "statementNote",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_CustomsProcedure.Statement.Note",
+                    "@type": "unece:AssociationBIE",
+                    "unece:cefactUNId": "UN01003469",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_CustomsProcedure.Details",
+                    "rdfs:comment": "A statement note for this cross-border customs procedure."
+                },
+                {
+                    "@id": "cefact:Cross-Border_RegulatoryProcedure.Statement.Note",
+                    "@type": "unece:AssociationBIE",
+                    "unece:cefactUNId": "UN01006180",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_RegulatoryProcedure.Details",
+                    "rdfs:comment": "A statement note for this cross-border regulatory procedure."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:statisticalTariffQuantity",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "xsd:decimal"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:CustomsProcedure"
+            },
+            "rdfs:comment": "A statistical tariff quantity, used for the calculation of duty, under this cross-border customs procedure.",
+            "rdfs:label": "statisticalTariffQuantity",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_CustomsProcedure.Statistical_Tariff.Quantity",
+                    "@type": "unece:BasicBIE",
+                    "unece:cefactUNId": "UN01003453",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_CustomsProcedure.Details",
+                    "rdfs:comment": "A statistical tariff quantity, used for the calculation of duty, under this cross-border customs procedure."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:statisticalValueSpecifiedAmount",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "xsd:decimal"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:Declaration"
+            },
+            "rdfs:comment": "The monetary value specified for statistical purposes in this exchanged declaration.",
+            "rdfs:label": "statisticalValueSpecifiedAmount",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Exchanged_Declaration.StatisticalValue_Specified.Amount",
+                    "@type": "unece:BasicBIE",
+                    "unece:TDED": "5072",
+                    "unece:cefactUNId": "UN01011016",
+                    "unece:cefactBieDomainClass": "cefact:Exchanged_Declaration.Details",
+                    "rdfs:comment": "The monetary value specified for statistical purposes in this exchanged declaration."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:subjectTypeCode",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "xsd:token"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:Declaration"
+            },
+            "rdfs:comment": "A code specifying a subject type for this specified declaration.",
+            "rdfs:label": "subjectTypeCode",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Specified_Declaration.Subject_Type.Code",
+                    "@type": "unece:BasicBIE",
+                    "unece:cefactUNId": "UN01015061",
+                    "unece:cefactBieDomainClass": "cefact:Specified_Declaration.Details",
+                    "rdfs:comment": "A code specifying a subject type for this specified declaration."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:submissionLocation",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "regulatory:Location"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:Declaration"
+            },
+            "rdfs:comment": "The submission location for this exchanged declaration.",
+            "rdfs:label": "submissionLocation",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Exchanged_Declaration.Submission.Logistics_Location",
+                    "@type": "unece:AssociationBIE",
+                    "unece:cefactUNId": "UN01011022",
+                    "unece:cefactBieDomainClass": "cefact:Exchanged_Declaration.Details",
+                    "rdfs:comment": "The submission location for this exchanged declaration."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:subordinateCategoryCode",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "xsd:token"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:CustomsProcedure"
+            },
+            "rdfs:comment": "A code specifying a subordinate category for this cross-border customs procedure.",
+            "rdfs:label": "subordinateCategoryCode",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_CustomsProcedure.SubordinateCategory.Code",
+                    "@type": "unece:BasicBIE",
+                    "unece:cefactUNId": "UN01003442",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_CustomsProcedure.Details",
+                    "rdfs:comment": "A code specifying a subordinate category for this cross-border customs procedure."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:supplementaryTariffQuantity",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "xsd:decimal"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:CustomsProcedure"
+            },
+            "rdfs:comment": "A supplementary tariff quantity, used for the calculation of duty, under this cross-border customs procedure.",
+            "rdfs:label": "supplementaryTariffQuantity",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_CustomsProcedure.Supplementary_Tariff.Quantity",
+                    "@type": "unece:BasicBIE",
+                    "unece:cefactUNId": "UN01003452",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_CustomsProcedure.Details",
+                    "rdfs:comment": "A supplementary tariff quantity, used for the calculation of duty, under this cross-border customs procedure."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:tariffAmount",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "xsd:decimal"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:RegulatoryProcedure"
+            },
+            "rdfs:comment": "A monetary value of a tariff for this cross-border regulatory procedure.",
+            "rdfs:label": "tariffAmount",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_RegulatoryProcedure.Tariff.Amount",
+                    "@type": "unece:BasicBIE",
+                    "unece:cefactUNId": "UN01006162",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_RegulatoryProcedure.Details",
+                    "rdfs:comment": "A monetary value of a tariff for this cross-border regulatory procedure."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:tariffDeductionQuantity",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "xsd:decimal"
+            },
+            "schema:domainIncludes": [
+                {
+                    "@id": "regulatory:CustomsProcedure"
+                },
+                {
+                    "@id": "regulatory:RegulatoryProcedure"
+                }
+            ],
+            "rdfs:comment": [
+                "A quantity to be deducted from the tariff quantity for the calculation of duty under this cross-border customs procedure.",
+                "A quantity to be deducted from the tariff quantity for this cross-border regulatory procedure."
+            ],
+            "rdfs:label": "tariffDeductionQuantity",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_CustomsProcedure.TariffDeduction.Quantity",
+                    "@type": "unece:BasicBIE",
+                    "unece:cefactUNId": "UN01003454",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_CustomsProcedure.Details",
+                    "rdfs:comment": "A quantity to be deducted from the tariff quantity for the calculation of duty under this cross-border customs procedure."
+                },
+                {
+                    "@id": "cefact:Cross-Border_RegulatoryProcedure.TariffDeduction.Quantity",
+                    "@type": "unece:BasicBIE",
+                    "unece:TDED": "6032",
+                    "unece:cefactUNId": "UN01006157",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_RegulatoryProcedure.Details",
+                    "rdfs:comment": "A quantity to be deducted from the tariff quantity for this cross-border regulatory procedure."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:tariffQuantity",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "xsd:decimal"
+            },
+            "schema:domainIncludes": [
+                {
+                    "@id": "regulatory:CustomsProcedure"
+                },
+                {
+                    "@id": "regulatory:RegulatoryProcedure"
+                }
+            ],
+            "rdfs:comment": [
+                "A tariff quantity for this cross-border regulatory procedure.",
+                "A tariff quantity, used for the calculation of duty, under this cross-border customs procedure."
+            ],
+            "rdfs:label": "tariffQuantity",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_RegulatoryProcedure.Tariff.Quantity",
+                    "@type": "unece:BasicBIE",
+                    "unece:TDED": "6102",
+                    "unece:cefactUNId": "UN01006156",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_RegulatoryProcedure.Details",
+                    "rdfs:comment": "A tariff quantity for this cross-border regulatory procedure."
+                },
+                {
+                    "@id": "cefact:Cross-Border_CustomsProcedure.Tariff.Quantity",
+                    "@type": "unece:BasicBIE",
+                    "unece:cefactUNId": "UN01003450",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_CustomsProcedure.Details",
+                    "rdfs:comment": "A tariff quantity, used for the calculation of duty, under this cross-border customs procedure."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:tariffQuotaId",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "xsd:token"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:CustomsProcedure"
+            },
+            "rdfs:comment": "The identifier of the tariff quota for this cross-border customs procedure.",
+            "rdfs:label": "tariffQuotaId",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_CustomsProcedure.TariffQuota.Identifier",
+                    "@type": "unece:BasicBIE",
+                    "unece:cefactUNId": "UN01003457",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_CustomsProcedure.Details",
+                    "rdfs:comment": "The identifier of the tariff quota for this cross-border customs procedure."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:thirdTariffQuantity",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "xsd:decimal"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:CustomsProcedure"
+            },
+            "rdfs:comment": "The third tariff quantity, used for the calculation of duty, under this cross-border customs procedure.",
+            "rdfs:label": "thirdTariffQuantity",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_CustomsProcedure.Third_Tariff.Quantity",
+                    "@type": "unece:BasicBIE",
+                    "unece:cefactUNId": "UN01003451",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_CustomsProcedure.Details",
+                    "rdfs:comment": "The third tariff quantity, used for the calculation of duty, under this cross-border customs procedure."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:totalChargeAmount",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "xsd:decimal"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:RegulatoryProcedure"
+            },
+            "rdfs:comment": "A monetary value of the total charges, including tariff and non-tariff charges, for this cross-border regulatory procedure.",
+            "rdfs:label": "totalChargeAmount",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_RegulatoryProcedure.TotalCharge.Amount",
+                    "@type": "unece:BasicBIE",
+                    "unece:cefactUNId": "UN01006164",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_RegulatoryProcedure.Details",
+                    "rdfs:comment": "A monetary value of the total charges, including tariff and non-tariff charges, for this cross-border regulatory procedure."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:totalConsignmentValueAmount",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "xsd:decimal"
+            },
+            "schema:domainIncludes": [
+                {
+                    "@id": "regulatory:CustomsProcedure"
+                },
+                {
+                    "@id": "regulatory:RegulatoryProcedure"
+                }
+            ],
+            "rdfs:comment": [
+                "The total monetary value for a consignment for this cross-border regulatory procedure.",
+                "The total monetary value for customs purposes of all goods in a cross-border consignment, whether or not they are subject to the same customs procedure and have the same tariff/statistical heading, country information and duty regime."
+            ],
+            "rdfs:label": "totalConsignmentValueAmount",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_CustomsProcedure.TotalConsignmentValue.Amount",
+                    "@type": "unece:BasicBIE",
+                    "unece:cefactUNId": "UN01003444",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_CustomsProcedure.Details",
+                    "rdfs:comment": "The total monetary value for customs purposes of all goods in a cross-border consignment, whether or not they are subject to the same customs procedure and have the same tariff/statistical heading, country information and duty regime."
+                },
+                {
+                    "@id": "cefact:Cross-Border_RegulatoryProcedure.TotalConsignmentValue.Amount",
+                    "@type": "unece:BasicBIE",
+                    "unece:TDED": "5070",
+                    "unece:cefactUNId": "UN01006155",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_RegulatoryProcedure.Details",
+                    "rdfs:comment": "The total monetary value for a consignment for this cross-border regulatory procedure."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:totalInvoiceSpecifiedAmount",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "xsd:decimal"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:Declaration"
+            },
+            "rdfs:comment": "The total invoice monetary value specified in this exchanged declaration.",
+            "rdfs:label": "totalInvoiceSpecifiedAmount",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Exchanged_Declaration.TotalInvoice_Specified.Amount",
+                    "@type": "unece:BasicBIE",
+                    "unece:TDED": "5072",
+                    "unece:cefactUNId": "UN01011017",
+                    "unece:cefactBieDomainClass": "cefact:Exchanged_Declaration.Details",
+                    "rdfs:comment": "The total invoice monetary value specified in this exchanged declaration."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:totalPackageSpecifiedQuantity",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "xsd:decimal"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:Declaration"
+            },
+            "rdfs:comment": "The total package quantity specified in this exchanged declaration.",
+            "rdfs:label": "totalPackageSpecifiedQuantity",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Exchanged_Declaration.TotalPackage_Specified.Quantity",
+                    "@type": "unece:BasicBIE",
+                    "unece:cefactUNId": "UN01011010",
+                    "unece:cefactBieDomainClass": "cefact:Exchanged_Declaration.Details",
+                    "rdfs:comment": "The total package quantity specified in this exchanged declaration."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:totalPayableAmount",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "xsd:decimal"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:CustomsProcedure"
+            },
+            "rdfs:comment": "The monetary value of the total payable for this cross-border customs procedure including duty and other charges.",
+            "rdfs:label": "totalPayableAmount",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_CustomsProcedure.TotalPayable.Amount",
+                    "@type": "unece:BasicBIE",
+                    "unece:cefactUNId": "UN01003447",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_CustomsProcedure.Details",
+                    "rdfs:comment": "The monetary value of the total payable for this cross-border customs procedure including duty and other charges."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:transactionNatureCode",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "xsd:token"
+            },
+            "schema:domainIncludes": [
+                {
+                    "@id": "regulatory:CustomsProcedure"
+                },
+                {
+                    "@id": "regulatory:RegulatoryProcedure"
+                }
+            ],
+            "rdfs:comment": [
+                "A code specifying the nature of a transaction for this cross-border regulatory procedure.",
+                "The code specifying the nature of a transaction for this cross-border customs procedure."
+            ],
+            "rdfs:label": "transactionNatureCode",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_RegulatoryProcedure.TransactionNature.Code",
+                    "@type": "unece:BasicBIE",
+                    "unece:cefactUNId": "UN01006153",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_RegulatoryProcedure.Details",
+                    "rdfs:comment": "A code specifying the nature of a transaction for this cross-border regulatory procedure."
+                },
+                {
+                    "@id": "cefact:Cross-Border_CustomsProcedure.TransactionNature.Code",
+                    "@type": "unece:BasicBIE",
+                    "unece:cefactUNId": "UN01003440",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_CustomsProcedure.Details",
+                    "rdfs:comment": "The code specifying the nature of a transaction for this cross-border customs procedure."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:transitConsignmentDestinationLocation",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "regulatory:Location"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:CustomsProcedure"
+            },
+            "rdfs:comment": "The location at which the consignment is destined under a transit cross-border customs procedure.",
+            "rdfs:label": "transitConsignmentDestinationLocation",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_CustomsProcedure.Transit_ConsignmentDestination.Logistics_Location",
+                    "@type": "unece:AssociationBIE",
+                    "unece:cefactUNId": "UN01003476",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_CustomsProcedure.Details",
+                    "rdfs:comment": "The location at which the consignment is destined under a transit cross-border customs procedure."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:transitControlDurationMeasure",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "xsd:decimal"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:CustomsProcedure"
+            },
+            "rdfs:comment": "The transit control duration measure of time for this cross-border customs procedure, such as the number of days or hours.",
+            "rdfs:label": "transitControlDurationMeasure",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_CustomsProcedure.Transit_ControlDuration.Measure",
+                    "@type": "unece:BasicBIE",
+                    "unece:cefactUNId": "UN01003461",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_CustomsProcedure.Details",
+                    "rdfs:comment": "The transit control duration measure of time for this cross-border customs procedure, such as the number of days or hours."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:transitCustomsOfficeLocation",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "regulatory:Location"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:CustomsProcedure"
+            },
+            "rdfs:comment": "The location of a customs office which is responsible for transit formalities en route for the goods which are subject to this cross-border customs procedure.",
+            "rdfs:label": "transitCustomsOfficeLocation",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_CustomsProcedure.TransitCustomsOffice.Logistics_Location",
+                    "@type": "unece:AssociationBIE",
+                    "unece:cefactUNId": "UN01003472",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_CustomsProcedure.Details",
+                    "rdfs:comment": "The location of a customs office which is responsible for transit formalities en route for the goods which are subject to this cross-border customs procedure."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:transitCustomsOfficeSpecifiedLocation",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "regulatory:Location"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:RegulatoryProcedure"
+            },
+            "rdfs:comment": "A location of a specified customs office which is responsible for transit formalities en route for the goods which are subject to this cross-border regulatory procedure.",
+            "rdfs:label": "transitCustomsOfficeSpecifiedLocation",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_RegulatoryProcedure.TransitCustomsOffice_Specified.Logistics_Location",
+                    "@type": "unece:AssociationBIE",
+                    "unece:cefactUNId": "UN01008976",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_RegulatoryProcedure.Details",
+                    "rdfs:comment": "A location of a specified customs office which is responsible for transit formalities en route for the goods which are subject to this cross-border regulatory procedure."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:transitReleaseCustomsOfficeLocation",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "regulatory:Location"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:CustomsProcedure"
+            },
+            "rdfs:comment": "The location of the customs office at which the goods which are subject to this cross-border customs procedure are released from a customs transit regime.",
+            "rdfs:label": "transitReleaseCustomsOfficeLocation",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_CustomsProcedure.TransitReleaseCustomsOffice.Logistics_Location",
+                    "@type": "unece:AssociationBIE",
+                    "unece:cefactUNId": "UN01003473",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_CustomsProcedure.Details",
+                    "rdfs:comment": "The location of the customs office at which the goods which are subject to this cross-border customs procedure are released from a customs transit regime."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:transitReleaseCustomsOfficeSpecifiedLocation",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "regulatory:Location"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:RegulatoryProcedure"
+            },
+            "rdfs:comment": "A location of a specified customs office at which the goods which are subject to this cross-border regulatory procedure are released from a customs transit regime.",
+            "rdfs:label": "transitReleaseCustomsOfficeSpecifiedLocation",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_RegulatoryProcedure.TransitReleaseCustomsOffice_Specified.Logistics_Location",
+                    "@type": "unece:AssociationBIE",
+                    "unece:cefactUNId": "UN01008977",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_RegulatoryProcedure.Details",
+                    "rdfs:comment": "A location of a specified customs office at which the goods which are subject to this cross-border regulatory procedure are released from a customs transit regime."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:transportMovementTypeCode",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "unece:UNECECL8323Code"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:RegulatoryProcedure"
+            },
+            "rdfs:comment": "A code specifying the transport movement type, such as import, export, transit, for this cross-border regulatory procedure.",
+            "rdfs:label": "transportMovementTypeCode",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_RegulatoryProcedure.TransportMovement_Type.Code",
+                    "@type": "unece:BasicBIE",
+                    "unece:TDED": "8323",
+                    "unece:cefactUNId": "UN01008957",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_RegulatoryProcedure.Details",
+                    "rdfs:comment": "A code specifying the transport movement type, such as import, export, transit, for this cross-border regulatory procedure."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:treatmentEvent",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "regulatory:Event"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:RegulatoryProcedure"
+            },
+            "rdfs:comment": "A treatment event for this cross-border regulatory procedure.",
+            "rdfs:label": "treatmentEvent",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_RegulatoryProcedure.Treatment.Transport_Event",
+                    "@type": "unece:AssociationBIE",
+                    "unece:cefactUNId": "UN01008968",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_RegulatoryProcedure.Details",
+                    "rdfs:comment": "A treatment event for this cross-border regulatory procedure."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:typeCode",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "xsd:token"
+            },
+            "schema:domainIncludes": [
+                {
+                    "@id": "regulatory:CustomsProcedure"
+                },
+                {
+                    "@id": "regulatory:CustomsValuation"
+                },
+                {
+                    "@id": "regulatory:Declaration"
+                }
+            ],
+            "rdfs:comment": [
+                "The code specifying the type of cross-border customs procedure.",
+                "The code specifying the type of cross-border customs valuation.",
+                "The code specifying the type of specified declaration."
+            ],
+            "rdfs:label": "typeCode",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_CustomsProcedure.Type.Code",
+                    "@type": "unece:BasicBIE",
+                    "unece:cefactUNId": "UN01003434",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_CustomsProcedure.Details",
+                    "rdfs:comment": "The code specifying the type of cross-border customs procedure."
+                },
+                {
+                    "@id": "cefact:Specified_Declaration.Type.Code",
+                    "@type": "unece:BasicBIE",
+                    "unece:cefactUNId": "UN01015058",
+                    "unece:cefactBieDomainClass": "cefact:Specified_Declaration.Details",
+                    "rdfs:comment": "The code specifying the type of specified declaration."
+                },
+                {
+                    "@id": "cefact:Cross-Border_CustomsValuation.Type.Code",
+                    "@type": "unece:BasicBIE",
+                    "unece:TDED": "5509",
+                    "unece:cefactUNId": "UN01008956",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_CustomsValuation.Details",
+                    "rdfs:comment": "The code specifying the type of cross-border customs valuation."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:usedToDateQuotaQuantity",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "xsd:decimal"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:RegulatoryProcedure"
+            },
+            "rdfs:comment": "The quantity of the quota used to date under this cross-border regulatory procedure.",
+            "rdfs:label": "usedToDateQuotaQuantity",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_RegulatoryProcedure.UsedToDate_Quota.Quantity",
+                    "@type": "unece:BasicBIE",
+                    "unece:cefactUNId": "UN01006172",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_RegulatoryProcedure.Details",
+                    "rdfs:comment": "The quantity of the quota used to date under this cross-border regulatory procedure."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:valuationBasisAmount",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "xsd:decimal"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:RegulatoryProcedure"
+            },
+            "rdfs:comment": "The monetary value of the basis on which the valuation is, or will be, calculated for this cross-border regulatory procedure.",
+            "rdfs:label": "valuationBasisAmount",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_RegulatoryProcedure.ValuationBasis.Amount",
+                    "@type": "unece:BasicBIE",
+                    "unece:TDED": "5238",
+                    "unece:cefactUNId": "UN01006154",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_RegulatoryProcedure.Details",
+                    "rdfs:comment": "The monetary value of the basis on which the valuation is, or will be, calculated for this cross-border regulatory procedure."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:verifiedObject",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "regulatory:Object"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:Declaration"
+            },
+            "rdfs:comment": "An object verified for this specified declaration.",
+            "rdfs:label": "verifiedObject",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Specified_Declaration.Verified.Specified_Object",
+                    "@type": "unece:AssociationBIE",
+                    "unece:cefactUNId": "UN01015064",
+                    "unece:cefactBieDomainClass": "cefact:Specified_Declaration.Details",
+                    "rdfs:comment": "An object verified for this specified declaration."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:versionId",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "xsd:token"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:Declaration"
+            },
+            "rdfs:comment": "The identifier for the version of this exchanged declaration.",
+            "rdfs:label": "versionId",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Exchanged_Declaration.Version.Identifier",
+                    "@type": "unece:BasicBIE",
+                    "unece:cefactUNId": "UN01011012",
+                    "unece:cefactBieDomainClass": "cefact:Exchanged_Declaration.Details",
+                    "rdfs:comment": "The identifier for the version of this exchanged declaration."
+                }
+            ]
+        },
+        {
+            "@id": "regulatory:wTOAdditionCode",
+            "@type": "rdf:Property",
+            "schema:rangeIncludes": {
+                "@id": "xsd:token"
+            },
+            "schema:domainIncludes": {
+                "@id": "regulatory:CustomsValuation"
+            },
+            "rdfs:comment": "The code specifying any additions necessary under the World Trade Organization (WTO) Valuation Agreement used for the assessment of this cross-border customs valuation.",
+            "rdfs:label": "wTOAdditionCode",
+            "unece:cefactElementMetadata": [
+                {
+                    "@id": "cefact:Cross-Border_CustomsValuation.WTOAddition.Code",
+                    "@type": "unece:BasicBIE",
+                    "unece:TDED": "5097",
+                    "unece:cefactUNId": "UN01003489",
+                    "unece:cefactBieDomainClass": "cefact:Cross-Border_CustomsValuation.Details",
+                    "rdfs:comment": "The code specifying any additions necessary under the World Trade Organization (WTO) Valuation Agreement used for the assessment of this cross-border customs valuation."
+                }
+            ]
+        }
+    ]
+}
